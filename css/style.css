@@ -40,7 +40,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
-  width: calc(100% - 2rem);
+  width: 100%;
   z-index: 10;
 }
 .navbar-dark-light-pro .logo {
@@ -67,6 +67,7 @@
 
 /* هدر */
 .header-dark-light-pro {
+  width: 100%;
   text-align: center;
   padding: 2rem;
   background-color: var(--header-bg);
@@ -76,7 +77,7 @@
 }
 
 .card2 {
-  width: calc((33.333% - 2rem) * 4);
+  width: 100%;
   background-color: var(--card-bg);
   padding: 2rem 1rem;
   border-radius: 8px;
@@ -216,8 +217,9 @@
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  text-decoration: none;
+  color: var(--text-color);
   transition: transform 0.3s;
-
 }
 .category-box:hover {
   transform: scale(1.05);
@@ -259,5 +261,9 @@ i {
   }
   .header-dark-light-pro img {
     width: 100%;
+  }
+  .category-box {
+    width: 100px;
+    height: 100px;
   }
 }
