@@ -64,7 +64,17 @@
   background-color: #16a34a;
   color: #fff;
 }
-
+.hamburger{
+  display: none;
+}
+/* sidebar */
+.sidebar{
+  position: fixed;
+  width: 280px;
+  top: 50px;
+  height: 100%;
+  left: -100%;
+}
 /* هدر */
 .header-dark-light-pro {
   width: 100%;
@@ -265,5 +275,11 @@ i {
   .category-box {
     width: 100px;
     height: 100px;
+  }
+  .nav-links,.theme-switch{
+    display: none;
+  }
+  .hamburger{
+    display: block;
   }
 }
