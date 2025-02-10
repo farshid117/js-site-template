@@ -26,7 +26,8 @@
   padding: 0;
   background-color: var(--products-bg);
   color: var(--text-color);
-   transition: all 1s;
+  box-sizing: border-box;
+  transition: all 1s;
 }
 
 /* نوار بالا */
@@ -196,13 +197,45 @@
   margin: 0.5rem 0;
 }
 
-/* ریسپانسیو */
+/* index.html */
+      .category-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      }
+      .category-box {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: var(--card-bg);
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+      .category-box:hover {
+        transform: scale(1.05);
+      }
+      i {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+
+
+/* todo:  ریسپانسیو */
 @media screen and (max-width: 992px) {
  .card-dark-light-pro{
   width: 100%;
  
 }
-/* ریسپانسیو */
+
+}
+
 @media screen and (max-width: 768px) {
   .card-dark-light-pro {
     width: calc(50% - 1rem);
