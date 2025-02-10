@@ -69,11 +69,17 @@
 }
 /* sidebar */
 .sidebar{
+  background: var(--card-bg);
+  color: var(--text-color);
   position: fixed;
   width: 280px;
   top: 50px;
   height: 100%;
   left: -100%;
+  transition: .4s;
+}
+.sidebar.show{
+  left: 0;
 }
 /* هدر */
 .header-dark-light-pro {
