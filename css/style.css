@@ -304,7 +304,7 @@ i {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .card-dark-light-pro {
     width: calc(50% - 1rem);
   }
@@ -314,6 +314,13 @@ i {
   .card-dark-light-pro {
     width: 100%;
     padding: 2rem 0.5rem;
+  }
+   .nav-links,
+  .theme-switch {
+    display: none;
+  }
+  .hamburger {
+    display: block;
   }
 }
 
@@ -327,18 +334,7 @@ i {
     width: 100%;
     padding: 2rem 0.5rem;
   }
-  .header-dark-light-pro img {
-    width: 100%;
-  }
-  .category-box {
-    width: 100px;
-    height: 100px;
-  }
-  .nav-links,
-  .theme-switch {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-  }
+ 
+ 
+ 
 }
