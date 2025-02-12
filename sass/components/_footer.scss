@@ -1,0 +1,42 @@
+/* فوتر */
+.footer-drak-light-pro {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--footer-bg);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-drak-light-pro .social-icons {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  color: red;
+}
+
+.footer-drak-light-pro .social-icons img {
+  width: 32px;
+  height: 32px;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.footer-drak-light-pro p {
+  margin: 0.5rem 0;
+}
+.social-icons a {
+    font-size: 40px; /* اندازه‌ی آیکن‌ها */
+    color: var(--text-color); /* رنگ پیش‌فرض سفید */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* افکت بزرگ‌شدن هنگام هاور */
+}
+
+.whatsapp { color: #25D366; } /* سبز واتساپ */
+.telegram { color: #0088cc; } /* آبی تلگرام */
+.instagram { color: #E1306C; } /* قرمز-بنفش اینستاگرام */

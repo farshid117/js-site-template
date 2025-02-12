@@ -1,0 +1,24 @@
+{
+  "name": "js-site-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "sass": "sass --watch sass/style.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farshid117/js-site-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farshid117/js-site-template/issues"
+  },
+  "homepage": "https://github.com/farshid117/js-site-template#readme",
+  "devDependencies": {
+    "sass": "^1.84.0"
+  }
+}

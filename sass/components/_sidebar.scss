@@ -1,0 +1,45 @@
+/* sidebar */
+.sidebar {
+  background: var(--navbar-bg);
+  color: var(--text-color);
+  position: fixed;
+  width: 280px;
+  top: 70px;
+  height: 100%;
+  right: -100%;
+  transition: 0.4s;
+  z-index: 10;
+}
+.sidebar.show {
+  right: 0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+.sidebar.show .nav-links,
+.sidebar.show .theme-switch {
+  display: block;
+}
+.sidebar.show .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+.sidebar.show .nav-links li {
+  display: block;
+  margin: 0;
+  width: 100%;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+.sidebar.show .nav-links li:hover {
+  background-color: var(--card-bg);
+}
+.sidebar.show .nav-links li a {
+  display: flex;
+  align-items: center;
+}
+.sidebar-icon {
+  font-size: 24px;
+  margin: 0px 0 0 12px;
+}

@@ -1,0 +1,30 @@
+.category-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.category-box {
+  display: block;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: transform 0.3s;
+}
+.category-box:hover {
+  transform: scale(1.05);
+}
+.category-box-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}

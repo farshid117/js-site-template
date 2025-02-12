@@ -1,6 +1,5 @@
-/* 24-dark-light-profitional-styles */
-/* utilities */
-
+@charset "UTF-8";
+/* Variables  style */
 /* متغیرهای تم */
 :root {
   --navbar-bg: #fff;
@@ -10,9 +9,10 @@
   --footer-bg: #eeeeee;
   --text-color: #333;
   --title-color: #e65100;
+  --ff-primary: "Vazir", sans-serif;
 }
 
-.drak-light-pro-body.dark {
+body.dark {
   --navbar-bg: #333c4c;
   --header-bg: #111827;
   --products-bg: #111827;
@@ -23,15 +23,62 @@
   transition: all 0.5s;
 }
 
-/* استایل‌های پایه */
-.drak-light-pro-body {
-  font-family: vazir, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--products-bg);
-  color: var(--text-color);
-  box-sizing: border-box;
-  transition: all 0.5s;
+/* todo Font-Fasce  */
+@font-face {
+  font-family: "Vazir";
+  src: local("vazir"), local("Vazir"), local("vazir-normal"), local("Vazir-normal"), url("../../fonts/Vazir.woff2") format("woff2"), url("../../fonts/Vazir.woff") format("woff"), url("../../fonts/Vazir.eot") format("opentype"), url("../../fonts/Vazir.eot?#iefix") format("embedded-opentype"), url("../../fonts/Vazir.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Vazir-Bold";
+  src: url("../../fonts/Vazir-Bold.woff2") format("woff2"), url("../../fonts/Vazir-Bold.woff") format("woff"), url("../../fonts/Vazir-Bold.eot") format("opentype"), url("../../fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/Vazir-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Vazir-Thin";
+  src: url("../../fonts/Vazir-Thin.woff2") format("woff2"), url("../../fonts/Vazir-Thin.woff") format("woff"), url("../../fonts/Vazir-Thin.eot") format("opentype"), url("../../fonts/Vazir-Thin.eot?#iefix") format("embedded-opentype"), url("../../fonts/Vazir-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Vazir-Light";
+  src: url("../../fonts/Vazir-Light.woff2") format("woff2"), url("../../fonts/Vazir-Light.woff") format("woff"), url("../../fonts/Vazir-Light.eot") format("opentype"), url("../../fonts/Vazir-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/Vazir-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Vazir-Medium";
+  src: url("../../fonts/Vazir-Medium.woff2") format("woff2"), url("../../fonts/Vazir-Medium.woff") format("woff"), url("../../fonts/Vazir-Medium.eot") format("opentype"), url("../../fonts/Vazir-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/Vazir-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Vazir-Black";
+  src: url("../../fonts/Vazir-Black.woff2") format("woff2"), url("../../fonts/Vazir-Black.woff") format("woff"), url("../../fonts/Vazir-Black.eot") format("opentype"), url("../../fonts/Vazir-Black.eot?#iefix") format("embedded-opentype"), url("../../fonts/Vazir-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+/* todo: YekanBakh Fonts */
+@font-face {
+  font-family: "YekanBakh";
+  src: url("../../fonts/YekanBakh-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "YekanBakh Medium";
+  src: url("../../fonts/YekanBakh-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "YekanBakh Bold";
+  src: url("../../fonts/YekanBakh-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "YekanBakh Heavy";
+  src: url("../../fonts/YekanBakh-Heavy.woff") format("woff");
+}
+/* Main Layout styles(utilities) */
+html {
+  scroll-behavior: smooth;
+  font-family: "vazir";
+}
+
+body {
+  font-family: "vazir";
 }
 
 /* نوار بالا */
@@ -47,9 +94,11 @@
   width: 100%;
   z-index: 10;
 }
+
 .navbar-dark-light-pro .logo {
   font-weight: bold;
 }
+
 .nav-links li {
   display: inline;
   margin: 0 10px;
@@ -59,6 +108,7 @@
   color: var(--text-color);
   text-decoration: none;
 }
+
 .theme-switch {
   font-family: vazir;
   cursor: pointer;
@@ -68,55 +118,13 @@
   background-color: #16a34a;
   color: #fff;
 }
+
 .hamburger {
   display: none;
   cursor: pointer;
+  font-size: 30px;
 }
-/* sidebar */
-.sidebar {
-  background: var(--navbar-bg);
-  color: var(--text-color);
-  position: fixed;
-  width: 280px;
-  top: 70px;
-  height: 100%;
-  right: -100%;
-  transition: 0.4s;
-  z-index: 10;
-}
-.sidebar.show {
-  right: 0;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-.sidebar.show .nav-links,
-.sidebar.show .theme-switch {
-  display: block;
-}
-.sidebar.show .nav-links {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: flex-start;
-  margin-top: 2rem;
-}
-.sidebar.show .nav-links li {
-  display: block;
-  margin: 0;
-  width: 100%;
-  padding: 20px 10px;
-  border-radius: 10px;
-}
-.sidebar.show .nav-links li:hover {
-  background-color: var(--card-bg);
-}
-.sidebar.show .nav-links li a {
-  display: flex;
-  align-items: center;
-}
-.sidebar-icon {
-  font-size: 24px;
-  margin: 0px 0 0 12px;
-}
+
 /* هدر */
 .header-dark-light-pro {
   width: 100%;
@@ -153,35 +161,124 @@
   margin: 0.5rem 0;
   font-weight: bold;
 }
+
 .academy-name {
   color: var(--title-color);
-    text-shadow:  
-    1px 1px 2px rgba(0, 0, 0, 0.8),  /* سایه اصلی نزدیک به متن */
-    2px 2px 3px rgba(0, 0, 0, 0.6),  /* سایه متوسط برای عمق */
-    3px 3px 5px rgba(0, 0, 0, 0.4);  /* سایه دورتر برای برجسته شدن */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 2px 2px 3px rgba(0, 0, 0, 0.6), 3px 3px 5px rgba(0, 0, 0, 0.4); /* سایه دورتر برای برجسته شدن */
 }
-.drak-light-pro-body.dark .academy-name{
-  text-shadow:  
-    2px 2px 4px rgba(0, 0, 0, 0.8), /* سایه‌ی مشکی سنگین */
-    4px 4px 8px rgba(0, 0, 0, 0.6);  /* لایه دوم برای عمق بیشتر */  /* سایه گرم برای حس عمق */
+
+.drak-light-pro-body.dark .academy-name {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 8px rgba(0, 0, 0, 0.6); /* لایه دوم برای عمق بیشتر */ /* سایه گرم برای حس عمق */
 }
+
 .header-dark-light-pro .nav-subtitle {
   margin-top: 20px;
   font-weight: bold;
 }
 
-/* بخش محصولات */
-.products {
-  padding: 2rem;
-  background-color: var(--products-bg);
+/* sidebar */
+.sidebar {
+  background: var(--navbar-bg);
+  color: var(--text-color);
+  position: fixed;
+  width: 280px;
+  top: 70px;
+  height: 100%;
+  right: -100%;
+  transition: 0.4s;
+  z-index: 10;
 }
 
-.products h2 {
+.sidebar.show {
+  right: 0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar.show .nav-links,
+.sidebar.show .theme-switch {
+  display: block;
+}
+
+.sidebar.show .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.sidebar.show .nav-links li {
+  display: block;
+  margin: 0;
+  width: 100%;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+.sidebar.show .nav-links li:hover {
+  background-color: var(--card-bg);
+}
+
+.sidebar.show .nav-links li a {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-icon {
+  font-size: 24px;
+  margin: 0px 0 0 12px;
+}
+
+/* فوتر */
+.footer-drak-light-pro {
   text-align: center;
-  margin-bottom: 2rem;
-  color: orange;
+  padding: 2rem 1rem;
+  background-color: var(--footer-bg);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
 }
 
+.footer-drak-light-pro .social-icons {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  color: red;
+}
+
+.footer-drak-light-pro .social-icons img {
+  width: 32px;
+  height: 32px;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.footer-drak-light-pro p {
+  margin: 0.5rem 0;
+}
+
+.social-icons a {
+  font-size: 40px; /* اندازه‌ی آیکن‌ها */
+  color: var(--text-color); /* رنگ پیش‌فرض سفید */
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2); /* افکت بزرگ‌شدن هنگام هاور */
+}
+
+.whatsapp {
+  color: #25D366;
+} /* سبز واتساپ */
+.telegram {
+  color: #0088cc;
+} /* آبی تلگرام */
+.instagram {
+  color: #E1306C;
+} /* قرمز-بنفش اینستاگرام */
+/* card Product styles */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -210,6 +307,7 @@
   transition: transform 0.4s;
   border: 2px solid #333c4c;
 }
+
 .card-dark-light-pro .ava-img,
 .card-dark-light-pro .rayan-img {
   object-position: initial;
@@ -233,37 +331,6 @@
   transform: scale(1.05);
 }
 
-/* فوتر */
-.footer-drak-light-pro {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: var(--footer-bg);
-  color: var(--text-color);
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-drak-light-pro .social-icons {
-  margin: 1rem 0;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  color: red;
-}
-
-.footer-drak-light-pro .social-icons img {
-  width: 32px;
-  height: 32px;
-  margin: 0 5px;
-  cursor: pointer;
-  color: #fff;
-}
-
-.footer-drak-light-pro p {
-  margin: 0.5rem 0;
-}
-
-/* index.html */
 .category-boxes {
   display: flex;
   flex-wrap: wrap;
@@ -271,6 +338,7 @@
   gap: 20px;
   padding: 20px;
 }
+
 .category-box {
   display: block;
   width: 150px;
@@ -287,23 +355,48 @@
   color: var(--text-color);
   transition: transform 0.3s;
 }
+
 .category-box:hover {
   transform: scale(1.05);
 }
-i {
+
+.category-box-icon {
   font-size: 30px;
   margin-bottom: 10px;
 }
 
-/* todo:  ریسپانسیو */
-@media screen and (max-width: 1400px) {
+/* js-template-project-index.html-styles */
+/* utilities */
+/* استایل‌های پایه */
+.drak-light-pro-body {
+  font-family: vazir, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--products-bg);
+  color: var(--text-color);
+  box-sizing: border-box;
+  transition: all 0.5s;
 }
+
+/* بخش محصولات */
+.products {
+  padding: 2rem;
+  background-color: var(--products-bg);
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: orange;
+}
+
+/* index.html */
+/* Responsive Styles */
 @media screen and (max-width: 992px) {
   .card-dark-light-pro {
     width: 100%;
   }
 }
-
 @media screen and (max-width: 800px) {
   .card-dark-light-pro {
     width: calc(50% - 1rem);
@@ -315,7 +408,7 @@ i {
     width: 100%;
     padding: 2rem 0.5rem;
   }
-   .nav-links,
+  .nav-links,
   .theme-switch {
     display: none;
   }
@@ -323,7 +416,6 @@ i {
     display: block;
   }
 }
-
 @media screen and (max-width: 480px) {
   .navbar-dark-light-pro {
     width: 100%;
@@ -334,7 +426,6 @@ i {
     width: 100%;
     padding: 2rem 0.5rem;
   }
- 
- 
- 
 }
+
+/*# sourceMappingURL=style.css.map */

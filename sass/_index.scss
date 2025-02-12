@@ -1,0 +1,30 @@
+/* js-template-project-index.html-styles */
+/* utilities */
+
+
+
+/* استایل‌های پایه */
+.drak-light-pro-body {
+  font-family: vazir, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--products-bg);
+  color: var(--text-color);
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+/* بخش محصولات */
+.products {
+  padding: 2rem;
+  background-color: var(--products-bg);
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: orange;
+}
+
+
+/* index.html */

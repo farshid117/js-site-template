@@ -1,0 +1,26 @@
+/* Variables  style */
+
+/* متغیرهای تم */
+:root {
+  --navbar-bg: #fff;
+  --header-bg: #f0f8ff;
+  --products-bg: #f9f9f9;
+  --card-bg: #ffffff;
+  --footer-bg: #eeeeee;
+  --text-color: #333;
+  --title-color: #e65100;
+
+   --ff-primary: "Vazir", sans-serif;
+}
+
+body.dark {
+  --navbar-bg: #333c4c;
+  --header-bg: #111827;
+  --products-bg: #111827;
+  --card-bg: #242a38;
+  --footer-bg: #333c4c;
+  --text-color: #f9f9f9;
+  --title-color: #FFA726;
+  transition: all 0.5s;
+}
+
