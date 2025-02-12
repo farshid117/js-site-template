@@ -11,9 +11,10 @@
   </head>
   <body class="drak-light-pro-body">
     <!-- todo: Navbar نوار ناوبری -->
-         <nav class="navbar-dark-light-pro">
-      
-      <h3 class="logo">آکادمی <span class="academy-name ">برنامه‌نویسِ نابغه</span></h3>
+    <nav class="navbar-dark-light-pro">
+      <h3 class="logo">
+        آکادمی <span class="academy-name">برنامه‌نویسِ نابغه</span>
+      </h3>
       <span class="hamburger"><i class="fa fa-bars"></i></span>
       <ul class="nav-links">
         <li><a href="#header">خانه</a></li>
@@ -54,7 +55,8 @@
         </li>
         <li>
           <a href="#footer"
-            ><i class="fas fa-sign-out-alt sidebar-icon"></i> <span>خروج</span></a
+            ><i class="fas fa-sign-out-alt sidebar-icon"></i>
+            <span>خروج</span></a
           >
         </li>
         <li>
@@ -68,12 +70,13 @@
     <header id="header" class="header-dark-light-pro">
       <div class="card2">
         <img src="./image/3.jpg" alt="فروشگاه علی" />
-        <h1 class="nav-title">آکادمی <span class="academy-name">برنامه‌نویسِ نابغه</span></h1>
-        <h2 class="nav-subtitle">👩🏻‍💻 Coder Genius 👩🏻‍💻 </h2>
+        <h1 class="nav-title">
+          آکادمی <span class="academy-name">برنامه‌نویسِ نابغه</span>
+        </h1>
+        <h2 class="nav-subtitle">👩🏻‍💻 Coder Genius 👩🏻‍💻</h2>
         <p>یادگیری بهترین تکنولوژی‌های روز دنیا با ما ممکن است!</p>
       </div>
     </header>
-
 
     <!-- todo : Section -->
 
@@ -150,18 +153,18 @@
     <!-- todo: Footer -->
     <footer id="footer" class="footer-drak-light-pro">
       <p class="footer-text">
-        آکادمی <span class="academy-name">برنامه‌نویسِ نابغه</span> با بیش از ۵ سال سابقه در آموزش و ارائه بهترین محصولات
-        آموزشی!
+        آکادمی <span class="academy-name">برنامه‌نویسِ نابغه</span> با بیش از ۵
+        سال سابقه در آموزش و ارائه بهترین محصولات آموزشی!
       </p>
       <div class="social-icons">
-    <a href="https://wa.me/989170431514?text=سلام%20دوست%20عزیز!" target="_blank">
-      <i class="fab fa-whatsapp whatsapp"></i>
+    <a id="whatsapp" href="https://wa.me/989123456789" >
+        <i class="fab fa-whatsapp whatsapp"></i>
     </a>
-    <a href="tg://resolve?domain=farshid117"  >
-      <i class="fab fa-telegram-plane telegram"></i>
+    <a id="telegram" >
+        <i class="fab fa-telegram-plane telegram"></i>
     </a>
-    <a href="instagram://user?username=ali.khayatpour" target="_blank" >
-      <i class="fab fa-instagram instagram"></i>
+    <a id="instagram" >
+        <i class="fab fa-instagram instagram"></i>
     </a>
 </div>
 
@@ -170,5 +173,21 @@
   </body>
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="./js/app.js" type="module"></script>
-  <script></script>
+  <script>
+     // تشخیص موبایل
+    function isMobileDevice() {
+        return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
+    // تنظیم لینک‌ها بر اساس دستگاه کاربر
+    document.addEventListener("DOMContentLoaded", function () {
+        if (isMobileDevice()) {
+            document.getElementById("telegram").setAttribute("href", "tg://resolve?domain=farshid117");
+            document.getElementById("instagram").setAttribute("href", "instagram://user?username=ali.khayatpour");
+        } else {
+            document.getElementById("telegram").setAttribute("href", "https://t.me/farshid117");
+            document.getElementById("instagram").setAttribute("href", "https://www.instagram.com/ali.khayatpour");
+        }
+    });
+  </script>
 </html>

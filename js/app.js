@@ -42,3 +42,5 @@ sidebar.addEventListener("click", () => {
    console.log("hamburger clicked")
    sidebar.classList.toggle("show");
 })
+
+// todo :تشخیص موبایل
