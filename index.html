@@ -73,7 +73,7 @@
         <h1 class="nav-title">
           آکادمی <span class="academy-name">برنامه‌نویسِ نابغه</span>
         </h1>
-        <h2 class="nav-subtitle">👩🏻‍💻 Coder Genius 👩🏻‍💻</h2>
+        <h2 class="nav-subtitle">👩🏻‍💻 Genius Coder 👩🏻‍💻</h2>
         <p>یادگیری بهترین تکنولوژی‌های روز دنیا با ما ممکن است!</p>
       </div>
     </header>
@@ -157,39 +157,54 @@
         سال سابقه در آموزش و ارائه بهترین محصولات آموزشی!
       </p>
       <div class="social-icons">
-    <a id="whatsapp"  >
-        <i class="fab fa-whatsapp whatsapp"></i>
-    </a>
-    <a id="telegram" >
-        <i class="fab fa-telegram-plane telegram"></i>
-    </a>
-    <a id="instagram" >
-        <i class="fab fa-instagram instagram"></i>
-    </a>
-</div>
+        <a id="whatsapp">
+          <i class="fab fa-whatsapp whatsapp"></i>
+        </a>
+        <a id="telegram">
+          <i class="fab fa-telegram-plane telegram"></i>
+        </a>
+        <a id="instagram">
+          <i class="fab fa-instagram instagram"></i>
+        </a>
+      </div>
 
       <p class="footer-number">شماره تماس: 09170431514</p>
     </footer>
   </body>
   <script src="./js/bootstrap.bundle.min.js"></script>
-  <script src="./js/app.js" ></script>
+  <script src="./js/app.js"></script>
   <script>
-     // تشخیص موبایل
+    // تشخیص موبایل
     function isMobileDevice() {
-        return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     }
 
     // تنظیم لینک‌ها بر اساس دستگاه کاربر
     document.addEventListener("DOMContentLoaded", function () {
-        if (isMobileDevice()) {
-          document.getElementById("whatsapp").setAttribute("href", "https://wa.me/989170431514");
-            document.getElementById("telegram").setAttribute("href", "tg://resolve?domain=farshid117");
-            document.getElementById("instagram").setAttribute("href", "instagram://user?username=ali.khayatpour");
-        } else {
-          document.getElementById("whatsapp").setAttribute("href", "https://web.whatsapp.com/send?phone=989170431514");
-            document.getElementById("telegram").setAttribute("href", "https://t.me/farshid117");
-            document.getElementById("instagram").setAttribute("href", "https://www.instagram.com/ali.khayatpour");
-        }
+      if (isMobileDevice()) {
+        document
+          .getElementById("whatsapp")
+          .setAttribute("href", "https://wa.me/989170431514");
+        document
+          .getElementById("telegram")
+          .setAttribute("href", "tg://resolve?domain=farshid117");
+        document
+          .getElementById("instagram")
+          .setAttribute("href", "instagram://user?username=ali.khayatpour");
+      } else {
+        document
+          .getElementById("whatsapp")
+          .setAttribute(
+            "href",
+            "https://web.whatsapp.com/send?phone=989170431514"
+          );
+        document
+          .getElementById("telegram")
+          .setAttribute("href", "https://t.me/farshid117");
+        document
+          .getElementById("instagram")
+          .setAttribute("href", "https://www.instagram.com/ali.khayatpour");
+      }
     });
   </script>
 </html>
