@@ -71,16 +71,6 @@ body.dark {
   font-family: "YekanBakh Heavy";
   src: url("../../fonts/YekanBakh-Heavy.woff") format("woff");
 }
-/* Main Layout styles(utilities) */
-html {
-  scroll-behavior: smooth;
-  font-family: "vazir";
-}
-
-body {
-  font-family: "vazir";
-}
-
 /* نوار بالا */
 .navbar-dark-light-pro {
   display: flex;
