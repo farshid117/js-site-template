@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>لیست نوبارها</title>
-    <link rel="stylesheet" href="../../../css/bootstrap.rtl.css">
-    <link rel="stylesheet" href="../../../css/iHover.css">
-    <link rel="stylesheet" href="../../../css/all.css">
-    <link rel="stylesheet" href="../../../css/style.css">
-</head>
- <body class="drak-light-pro-body">
-    <!-- todo: Navbar نوار ناوبری -->
+    <link rel="stylesheet" href="../../../css/bootstrap.rtl.css" />
+    <link rel="stylesheet" href="../../../css/iHover.css" />
+    <link rel="stylesheet" href="../../../css/all.css" />
+    <link rel="stylesheet" href="../../../css/style.css" />
+  </head>
+  <body class="drak-light-pro-body">
+<!-- todo: Navbar نوار ناوبری -->
     <nav class="navbar-dark-light-pro">
       <h3 class="logo">
         آکادمی <span class="academy-name">برنامه‌نویسِ نابغه</span>
@@ -26,7 +26,7 @@
         <li></li>
       </ul>
     </nav>
-    <!-- todo Sidebar -->
+<!-- todo Sidebar -->
     <div class="sidebar">
       <ul class="nav-links">
         <li>
@@ -66,11 +66,15 @@
         </li>
       </ul>
     </div>
+<!-- todo: Main Section -->
+ <div class="container mt-4">
+        <h2 class="text-center mb-4">لیست انواع نوبارها</h2>
+        <div class="row" id="navbar-container">
+        </div>
+    </div>
 
-
-
-
-        <footer id="footer" class="footer-drak-light-pro">
+<!-- todo: Footer -->
+    <footer id="footer" class="footer-drak-light-pro">
       <p class="footer-text">
         آکادمی <span class="academy-name">برنامه‌نویسِ نابغه</span> با بیش از ۵
         سال سابقه در آموزش و ارائه بهترین محصولات آموزشی!
@@ -126,17 +130,7 @@
       }
     });
   </script>
-</html>
-
-
-
- <!--  <div class="container mt-4">
-        <h2 class="text-center mb-4">لیست انواع نوبارها</h2>
-        <div class="row" id="navbar-container">
-        </div>
-    </div> -->
-
-<!--     <script>
+      <script>
         fetch("../../../data/navbars.json")
             .then(response => response.json())
             .then(navbars => {
@@ -160,4 +154,7 @@
                 });
             })
             .catch(error => console.error("خطا در دریافت اطلاعات نوبارها:", error));
-    </script> -->
+    </script>
+
+</html>
+
