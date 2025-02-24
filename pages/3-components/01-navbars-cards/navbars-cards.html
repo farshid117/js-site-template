@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لیست نوبارها</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gudh/ihover@master/src/ihover.css">
+</head>
+<body>
+    <div class="container">
+        <h2>لیست انواع نوبارها</h2>
+        <div class="navbar-grid" id="navbar-container">
+            <!-- کارت‌های نوبارها اینجا داینامیک اضافه می‌شوند -->
+        </div>
+    </div>
+
+    <script>
+        fetch("../data/navbars.json")
+            .then(response => response.json())
+            .then(navbars => {
+                const container = document.getElementById("navbar-container");
+                navbars.forEach(navbar => {
+                    const navbarItem = `
+                        <div class="ihover">
+                            <a href="../projects/3-components/01-navbars/${navbar.id}/index.html" target="_blank">
+                                <div class="ihover-img">
+                                    <img src="https://picsum.photos/200/150" alt="${navbar.name}">
+                                </div>
+                                <div class="ihover-text">
+                                    <h3>${navbar.name}</h3>
+                                    <button class="demo-btn">مشاهده دمو</button>
+                                    <button class="code-btn">مشاهده کد</button>
+                                </div>
+                            </a>
+                        </div>
+                    `;
+                    container.innerHTML += navbarItem;
+                });
+            })
+            .catch(error => console.error("خطا در دریافت اطلاعات نوبارها:", error));
+    </script>
+</body>
+</html>
