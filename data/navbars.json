@@ -13,5 +13,20 @@
     "id": "03-navbar3",
     "name": "نوبار آبی",
     "demoPath": "../projects/3-components/01-navbars/03-navbar3/index.html"
+  },
+  {
+    "id": "01-navbar1",
+    "name": "نوبار روشن",
+    "demoPath": "../projects/3-components/01-navbars/01-navbar1/index.html"
+  },
+  {
+    "id": "02-navbar2",
+    "name": "نوبار تیره",
+    "demoPath": "../projects/3-components/01-navbars/02-navbar2/index.html"
+  },
+  {
+    "id": "03-navbar3",
+    "name": "نوبار آبی",
+    "demoPath": "../projects/3-components/01-navbars/03-navbar3/index.html"
   }
 ]
