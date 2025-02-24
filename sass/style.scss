@@ -2,7 +2,8 @@
 @import "base";
 @import "mixins";
 @import "configs/fonts";
-// @import "configsy/utilities";
+@import "configs/utilities";
+
 @import "components/navbar";
 @import "components/header";
 @import "components/sidebar";
@@ -11,7 +12,7 @@
 @import "components/category-box-btn";
 
 //sass/03-components styles
-@import "prac";
+@import "practical-components/navbars-cards";
 
 @import "components/index";
 @import "responsive";
