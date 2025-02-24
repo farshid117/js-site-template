@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لیست نوبارها</title>
-    <link rel="stylesheet" href="../../../css/bootstrap.rtl.css">
-    <link rel="stylesheet" href="../../../css/iHover.css">
-    <link rel="stylesheet" href="../../../css/all.css">
-    <link rel="stylesheet" href="../../../css/style.css">
-</head>
- <body class="drak-light-pro-body">
-    <!-- todo: Navbar نوار ناوبری -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>page-default-template</title>
+    <link rel="stylesheet" href="../../../css/bootstrap.rtl.css" />
+    <link rel="stylesheet" href="../../../css/iHover.css" />
+    <link rel="stylesheet" href="../../../css/all.css" />
+    <link rel="stylesheet" href="../../../css/style.css" />
+  </head>
+  <body class="drak-light-pro-body">
+<!-- todo: Navbar نوار ناوبری -->
     <nav class="navbar-dark-light-pro">
       <h3 class="logo">
         آکادمی <span class="academy-name">برنامه‌نویسِ نابغه</span>
@@ -26,7 +26,7 @@
         <li></li>
       </ul>
     </nav>
-    <!-- todo Sidebar -->
+<!-- todo Sidebar -->
     <div class="sidebar">
       <ul class="nav-links">
         <li>
@@ -67,10 +67,14 @@
       </ul>
     </div>
 
+<!-- todo: Main Section -->
+
+<!-- add main code here -->
 
 
 
-        <footer id="footer" class="footer-drak-light-pro">
+<!-- todo: Footer -->
+    <footer id="footer" class="footer-drak-light-pro">
       <p class="footer-text">
         آکادمی <span class="academy-name">برنامه‌نویسِ نابغه</span> با بیش از ۵
         سال سابقه در آموزش و ارائه بهترین محصولات آموزشی!
@@ -90,6 +94,7 @@
       <p class="footer-number">شماره تماس: 09170431514</p>
     </footer>
   </body>
+
   <script src="../../../js/bootstrap.bundle.min.js"></script>
   <script src="../../../js/app.js"></script>
   <script>
@@ -128,36 +133,3 @@
   </script>
 </html>
 
-
-
- <!--  <div class="container mt-4">
-        <h2 class="text-center mb-4">لیست انواع نوبارها</h2>
-        <div class="row" id="navbar-container">
-        </div>
-    </div> -->
-
-<!--     <script>
-        fetch("../../../data/navbars.json")
-            .then(response => response.json())
-            .then(navbars => {
-                const container = document.getElementById("navbar-container");
-                navbars.forEach(navbar => {
-                    const navbarItem = `
-                        <div class="col-md-4 col-sm-6 mb-4">
-                            <div class="card shadow-sm">
-                                <div class="ihover">
-                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${navbar.name}">
-                                </div>
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">${navbar.name}</h5>
-                                    <a href="${navbar.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
-                                    <button class="btn btn-secondary code-btn" data-id="${navbar.id}">مشاهده کد</button>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    container.innerHTML += navbarItem;
-                });
-            })
-            .catch(error => console.error("خطا در دریافت اطلاعات نوبارها:", error));
-    </script> -->
