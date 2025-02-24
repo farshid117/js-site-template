@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>لیست نوبارها</title>
+    <link rel="stylesheet" href="../css/bootstrap.rtl.css">
+    <link rel="stylesheet" href="../css/iHover.css">
+    <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gudh/ihover@master/src/ihover.css">
 </head>
 <body>
-    <div class="container">
-        <h2>لیست انواع نوبارها</h2>
-        <div class="navbar-grid" id="navbar-container">
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">لیست انواع نوبارها</h2>
+        <div class="row" id="navbar-container">
             <!-- کارت‌های نوبارها اینجا داینامیک اضافه می‌شوند -->
         </div>
     </div>
@@ -22,17 +24,17 @@
                 const container = document.getElementById("navbar-container");
                 navbars.forEach(navbar => {
                     const navbarItem = `
-                        <div class="ihover">
-                            <a href="../projects/3-components/01-navbars/${navbar.id}/index.html" target="_blank">
-                                <div class="ihover-img">
-                                    <img src="https://picsum.photos/200/150" alt="${navbar.name}">
+                        <div class="col-md-4 col-sm-6 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="ihover">
+                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${navbar.name}">
                                 </div>
-                                <div class="ihover-text">
-                                    <h3>${navbar.name}</h3>
-                                    <button class="demo-btn">مشاهده دمو</button>
-                                    <button class="code-btn">مشاهده کد</button>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">${navbar.name}</h5>
+                                    <a href="${navbar.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
+                                    <button class="btn btn-secondary code-btn" data-id="${navbar.id}">مشاهده کد</button>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     `;
                     container.innerHTML += navbarItem;
