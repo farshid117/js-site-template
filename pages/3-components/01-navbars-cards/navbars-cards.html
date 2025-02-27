@@ -20,7 +20,7 @@
       </h3>
       <span class="hamburger"><i class="fa fa-bars"></i></span>
       <ul class="nav-links">
-        <li><a href="#header">خانه</a></li>
+        <li><a href="/index.html">خانه</a></li>
         <li><a href="#products">محصولات</a></li>
         <li><a href="#footer">تماس با ما</a></li>
         <li>
@@ -95,9 +95,9 @@
 
       <p class="footer-number">شماره تماس: 09170431514</p>
     </footer>
-
+    <!-- todo: show Html-Css-js Modal -->
     <!-- Modal برای نمایش کد -->
-    <div id="codeModal" class="modal">
+    <div id="codeModal" class="modal" style="display: none;">
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2 id="modal-title">مشاهده کد</h2>
@@ -182,7 +182,7 @@
                                 <div class="card-body text-center" style="color:var(--text-color)">
                                     <h5 class="card-title">${navbar.name}</h5>
                                     <a href="${navbar.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
-                                    <button class="btn btn-warning code-btn" data-id="${navbar.id}">مشاهده کد</button>
+                                    <button class="btn btn-warning code-btn" data-id="${navbar.id}" data-name="${navbar.name}">مشاهده کد</button>
                                 </div>
                             </div>
                         </div>
@@ -197,9 +197,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       const modal = document.getElementById("codeModal");
       const modalTitle = document.getElementById("modal-title");
-      const codeHtml = document
-        .getElementById("html-code")
-        .querySelector("code");
+      const codeHtml = document.getElementById("html-code").querySelector("code");
       const codeCss = document.getElementById("css-code").querySelector("code");
       const codeJs = document.getElementById("js-code").querySelector("code");
       const closeModal = document.querySelector(".close");
@@ -207,11 +205,11 @@
 
       document.addEventListener("click", function (event) {
         if (event.target.classList.contains("code-btn")) {
+          const navbarName = event.target.dataset.name;
           const navbarId = event.target.dataset.id;
-          console.log("navbarId:", navbarId); // چک کن که مقدار درست بیاد
 
           modal.style.display = "block";
-          modalTitle.textContent = `کد ${navbarId}`;
+          // modalTitle.textContent = `${navbarName}`;
 
           // پاک کردن محتوای قبلی
           codeHtml.innerHTML = "در حال بارگذاری...";
