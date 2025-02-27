@@ -83,7 +83,7 @@ input:focus,input:active{
     background-color: transparent;
     height: 45px;
     border-radius: 20px;
-    padding-left: 10px;
+    padding-left: 15px;
     font-size: 1.3rem;
     font-weight: bold;
      font-family: "vazir";
@@ -100,6 +100,14 @@ input:focus,input:active{
     border-radius: 20px;
     /* padding: 13px; */
     margin-bottom: 2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .4s;
+}
+.button-form button:hover{
+     background-color: #596888;
+     color: #fff;
 }
 
 .bottom-form a{
