@@ -97,7 +97,7 @@
     </footer>
     <!-- todo: show Html-Css-js Modal -->
     <!-- Modal برای نمایش کد -->
-    <div id="codeModal" class="modal" style="display: none;">
+    <div id="codeModal" class="modal" style="display: none">
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2 id="modal-title">مشاهده کد</h2>
@@ -197,7 +197,9 @@
     document.addEventListener("DOMContentLoaded", function () {
       const modal = document.getElementById("codeModal");
       const modalTitle = document.getElementById("modal-title");
-      const codeHtml = document.getElementById("html-code").querySelector("code");
+      const codeHtml = document
+        .getElementById("html-code")
+        .querySelector("code");
       const codeCss = document.getElementById("css-code").querySelector("code");
       const codeJs = document.getElementById("js-code").querySelector("code");
       const closeModal = document.querySelector(".close");
@@ -220,7 +222,7 @@
           let basePath =
             window.location.origin + "/projects/3-components/01-navbars/";
 
-          fetch(`${basePath}${navbarId}/index.html`)
+          /* fetch(`${basePath}${navbarId}/index.html`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -233,7 +235,22 @@
             .catch(() => {
               codeHtml.textContent =
                 "⚠️ فایل HTML یافت نشد! مسیر را بررسی کنید.";
-            });
+            }); */
+
+          fetch(
+
+            "https://api.github.com/repos/farshid117/js-site-template/contents/projects/3-components/01-navbars/index.html",
+            {
+              headers: {
+                Accept: "application/vnd.github.v3.raw",
+              },
+            }
+          )
+            .then((response) => response.text())
+            .then((html) => {
+              document.getElementById("html-code").textContent = html;
+            })
+            .catch((err) => console.error("خطا در دریافت کد:", err));
 
           fetch(`${basePath}${navbarId}/css/style.css`)
             .then((response) =>
