@@ -528,7 +528,12 @@ body {
   color: orange;
 }
 
-/* index.html */
+/* بخش سوم */
+.components .category-boxes a {
+  text-decoration: none;
+  color: #fff;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 992px) {
   .card-dark-light-pro {

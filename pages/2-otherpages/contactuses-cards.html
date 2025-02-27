@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>لیست نوبارها</title>
+    <title>نمونه‌های تماس با‌ما</title>
     <link rel="stylesheet" href="../../../css/bootstrap.rtl.css" />
-    <link rel="stylesheet" href="../../../css/iHover.css" />
+    <!-- <link rel="stylesheet" href="../../../css/iHover.css" /> -->
     <link rel="stylesheet" href="../../../css/all.css" />
     <link
       rel="stylesheet"
@@ -71,7 +71,7 @@
     </div>
     <!-- todo: Main Section -->
     <div class="container" style="margin-top: 150px; min-height: 100vh">
-      <h2 class="text-center mb-4">لیست انواع نوبارها</h2>
+      <h2 class="text-center mb-4">نمونه‌های تماس باما</h2>
       <div class="row" id="navbar-container"></div>
     </div>
 
@@ -95,7 +95,7 @@
 
       <p class="footer-number">شماره تماس: 09170431514</p>
     </footer>
-    <!-- todo: show Html-Css-js Modal -->
+    <!-- todo: Modal: show Html-Css-js  -->
     <!-- Modal برای نمایش کد -->
     <div id="codeModal" class="modal" style="display: none">
       <div class="modal-content">
@@ -126,17 +126,17 @@
     </div>
   </body>
 
+
   <script src="../../../js/bootstrap.bundle.min.js"></script>
   <script src="../../../js/app.js"></script>
-  <!-- Prism.js برای نمایش کدهای رنگی -->
+  <!-- todo: Prism.js برای نمایش کدهای رنگی -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-html.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-css.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-javascript.min.js"></script>
-
-  <!-- todo : Mobile Recognize -->
+  <!-- todo تشخیص موبایل  -->
   <script>
-    /*  تشخیص موبایل */
+    // تشخیص موبایل
     function isMobileDevice() {
       return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     }
@@ -171,30 +171,31 @@
   </script>
   <!-- todo: card Generator -->
   <script>
-    fetch("../../../data/3-components/navbars.json")
+    fetch("../../../data/2-otherpages/collaburations.json")
       .then((response) => response.json())
-      .then((navbars) => {
+      .then((collaburations) => {
         const container = document.getElementById("navbar-container");
-        navbars.forEach((navbar) => {
-          const navbarItem = `
+        collaburations.forEach((collaburation) => {
+          const headerItem = `
                         <div class="col-md-4 col-sm-6 mb-4">
                             <div class="card shadow-sm" style="background:var(--navbar-bg)">
                                 <div class="ihover">
-                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${navbar.name}">
+                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${collaburation.name}">
                                 </div>
                                 <div class="card-body text-center" style="color:var(--text-color)">
-                                    <h5 class="card-title">${navbar.name}</h5>
-                                    <a href="${navbar.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
-                                    <button class="btn btn-warning code-btn" data-id="${navbar.id}" data-name="${navbar.name}">مشاهده کد</button>
+                                    <h5 class="card-title">${collaburation.name}</h5>
+                                    <a href="${collaburation.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
+                                    <button class="btn btn-warning code-btn" data-id="${collaburation.id}" data-name="${collaburation.name}">مشاهده کد</button>
                                 </div>
                             </div>
                         </div>
                     `;
-          container.innerHTML += navbarItem;
+          container.innerHTML += headerItem;
         });
       })
       .catch((error) => console.error("خطا در دریافت اطلاعات نوبارها:", error));
   </script>
+
   <!-- todo: Codes of Modal of show code -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -210,8 +211,8 @@
 
       document.addEventListener("click", function (event) {
         if (event.target.classList.contains("code-btn")) {
-          const navbarName = event.target.dataset.name;
-          const navbarId = event.target.dataset.id;
+          const collaburationName = event.target.dataset.name;
+          const collaburationId = event.target.dataset.id;
 
           modal.style.display = "block";
           // modalTitle.textContent = `${navbarName}`;
@@ -223,9 +224,9 @@
 
           // بررسی مسیر صحیح
           let basePath =
-            window.location.origin + "/projects/3-components/01-navbars/";
-          /* todo get Html Code */
-          fetch(`${basePath}${navbarId}/index.html`)
+            window.location.origin + "/projects/2-otherpages/04-collaburations/";
+
+          fetch(`${basePath}${collaburationId}/index.html`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -239,23 +240,22 @@
               codeHtml.textContent =
                 "⚠️ فایل HTML یافت نشد! مسیر را بررسی کنید.";
             });
-
-          /*  fetch(
-            "https://raw.githubusercontent.com/farshid117/js-site-template/main/projects/3-components/01-navbars/index.html"
-          )
-            .then((response) => {
-              if (!response.ok) {
-                throw new Error("خطا در دریافت فایل");
-              }
-              return response.text();
-            })
-            .then((html) => {
-              document.getElementById("html-code").textContent = html;
-            })
-            .catch((error) => console.error("خطا در دریافت کد:", error)); */
-
+          /* todo get Html Code */
+          //   fetch(
+          //     "https://raw.githubusercontent.com/farshid117/js-site-template/main/projects/3-components/01-headers/index.html"
+          //   )
+          //     .then((response) => {
+          //       if (!response.ok) {
+          //         throw new Error("خطا در دریافت فایل");
+          //       }
+          //       return response.text();
+          //     })
+          //     .then((html) => {
+          //       document.getElementById("html-code").textContent = html;
+          //     })
+          //     .catch((error) => console.error("خطا در دریافت کد:", error));
           /* todo get Css Code */
-          fetch(`${basePath}${navbarId}/css/style.css`)
+          fetch(`${basePath}${collaburationId}/css/style.css`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -268,8 +268,9 @@
             .catch(() => {
               codeCss.textContent = "⚠️ فایل CSS یافت نشد! مسیر را بررسی کنید.";
             });
+            
           /* todo Get Js Code */
-          fetch(`${basePath}${navbarId}/js/app.js`)
+          fetch(`${basePath}${collaburationId}/js/app.js`)
             .then((response) =>
               response.ok
                 ? response.text()

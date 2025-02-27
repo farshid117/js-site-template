@@ -1,0 +1,32 @@
+[
+  {
+    "id": "01-collaburation1",
+    "name": "تماس با ما ریسپانسیو",
+    "demoPath": "../../../projects/2-otherpages/04-collaburations/01-collaburation1/index.html"
+  },
+  {
+    "id": "02-collaburation2",
+    "name": "تماس 2",
+    "demoPath": "../../../projects/2-otherpages/04-collaburations/02-collaburation2/index.html"
+  },
+  {
+    "id": "03-collaburation3",
+    "name": "تماس 3",
+    "demoPath": "../../../projects/2-otherpages/04-collaburations/03-collaburation3/index.html"
+  },
+  {
+    "id": "04-collaburation4",
+    "name": "تماس 4",
+    "demoPath": "../../../projects/2-otherpages/04-collaburations/04-collaburation4/index.html"
+  },
+  {
+    "id": "05-collaburation5",
+    "name": "تماس 5",
+    "demoPath": "../../../projects/2-otherpages/04-collaburations/05-collaburation5/index.html"
+  },
+  {
+    "id": "06-collaburation6",
+    "name": "تماس 6",
+    "demoPath": "../../../projects/2-otherpages/04-collaburations/06-collaburation6/index.html"
+  }
+]
