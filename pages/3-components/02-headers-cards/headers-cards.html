@@ -168,26 +168,26 @@
   </script>
   <!-- todo: card Generator -->
   <script>
-    fetch("../../../data/3-components/navbars.json")
+    fetch("../../../data/3-components/headers.json")
       .then((response) => response.json())
-      .then((navbars) => {
+      .then((headers) => {
         const container = document.getElementById("navbar-container");
-        navbars.forEach((navbar) => {
-          const navbarItem = `
+        headers.forEach((header) => {
+          const headerItem = `
                         <div class="col-md-4 col-sm-6 mb-4">
                             <div class="card shadow-sm" style="background:var(--navbar-bg)">
                                 <div class="ihover">
-                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${navbar.name}">
+                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${header.name}">
                                 </div>
                                 <div class="card-body text-center" style="color:var(--text-color)">
-                                    <h5 class="card-title">${navbar.name}</h5>
-                                    <a href="${navbar.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
-                                    <button class="btn btn-warning code-btn" data-id="${navbar.id}" data-name="${navbar.name}">مشاهده کد</button>
+                                    <h5 class="card-title">${header.name}</h5>
+                                    <a href="${header.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
+                                    <button class="btn btn-warning code-btn" data-id="${header.id}" data-name="${header.name}">مشاهده کد</button>
                                 </div>
                             </div>
                         </div>
                     `;
-          container.innerHTML += navbarItem;
+          container.innerHTML += headerItem;
         });
       })
       .catch((error) => console.error("خطا در دریافت اطلاعات نوبارها:", error));
@@ -207,8 +207,8 @@
 
       document.addEventListener("click", function (event) {
         if (event.target.classList.contains("code-btn")) {
-          const navbarName = event.target.dataset.name;
-          const navbarId = event.target.dataset.id;
+          const headerName = event.target.dataset.name;
+          const headerId = event.target.dataset.id;
 
           modal.style.display = "block";
           // modalTitle.textContent = `${navbarName}`;
@@ -222,7 +222,7 @@
           let basePath =
             window.location.origin + "/projects/3-components/02-headers/";
 
-          fetch(`${basePath}${navbarId}/index.html`)
+          fetch(`${basePath}${headerId}/index.html`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -238,7 +238,7 @@
             });
           /* todo get Html Code */
           //   fetch(
-          //     "https://raw.githubusercontent.com/farshid117/js-site-template/main/projects/3-components/01-navbars/index.html"
+          //     "https://raw.githubusercontent.com/farshid117/js-site-template/main/projects/3-components/01-headers/index.html"
           //   )
           //     .then((response) => {
           //       if (!response.ok) {
@@ -251,7 +251,7 @@
           //     })
           //     .catch((error) => console.error("خطا در دریافت کد:", error));
           /* todo get Css Code */
-          fetch(`${basePath}${navbarId}/css/style.css`)
+          fetch(`${basePath}${headerId}/css/style.css`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -264,8 +264,9 @@
             .catch(() => {
               codeCss.textContent = "⚠️ فایل CSS یافت نشد! مسیر را بررسی کنید.";
             });
+            
           /* todo Get Js Code */
-          fetch(`${basePath}${navbarId}/js/app.js`)
+          fetch(`${basePath}${headerId}/js/app.js`)
             .then((response) =>
               response.ok
                 ? response.text()

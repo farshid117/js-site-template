@@ -1,47 +1,32 @@
 [
   {
-    "id": "01-navbar1",
-    "name": "نوبار روشن",
-    "demoPath": "../../../projects/3-components/01-navbars/01-navbar1/index.html"
+    "id": "01-header1",
+    "name": "هدر 1",
+    "demoPath": "../../../projects/3-components/02-headers/01-header1/index.html"
   },
   {
-    "id": "02-navbar2",
-    "name": "نوبار تیره",
+    "id": "02-header2",
+    "name": "هدر 2",
     "demoPath": "../../../projects/3-components/01-navbars/02-navbar2/index.html"
   },
   {
-    "id": "03-navbar3",
-    "name": "نوبار آبی",
+    "id": "03-header3",
+    "name": "هدر 3",
     "demoPath": "../../../projects/3-components/01-navbars/03-navbar3/index.html"
   },
   {
-    "id": "04-navbar1",
-    "name": "نوبار روشن",
+    "id": "04-header4",
+    "name": "هدر 4",
     "demoPath": "../../../projects/3-components/01-navbars/01-navbar1/index.html"
   },
   {
-    "id": "05-navbar2",
-    "name": "نوبار تیره",
+    "id": "05-header5",
+    "name": "هدر 5",
     "demoPath": "../../../projects/3-components/01-navbars/02-navbar2/index.html"
   },
   {
-    "id": "06-navbar3",
-    "name": "نوبار آبی",
-    "demoPath": "../../../projects/3-components/01-navbars/03-navbar3/index.html"
-  },
-  {
-    "id": "07-navbar3",
-    "name": "نوبار آبی",
-    "demoPath": "../../../projects/3-components/01-navbars/03-navbar3/index.html"
-  },
-  {
-    "id": "08-navbar3",
-    "name": "نوبار آبی",
-    "demoPath": "../../../projects/3-components/01-navbars/03-navbar3/index.html"
-  },
-  {
-    "id": "09-navbar3",
-    "name": "نوبار آبی",
+    "id": "06-header6",
+    "name": "هدر 6",
     "demoPath": "../../../projects/3-components/01-navbars/03-navbar3/index.html"
   }
 ]
