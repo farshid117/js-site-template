@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../../../css/bootstrap.rtl.css" />
     <link rel="stylesheet" href="../../../css/iHover.css" />
     <link rel="stylesheet" href="../../../css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css" />
     <link rel="stylesheet" href="../../../css/style.css" />
   </head>
   <body class="drak-light-pro-body">
@@ -92,9 +95,43 @@
 
       <p class="footer-number">شماره تماس: 09170431514</p>
     </footer>
+
+    <!-- Modal برای نمایش کد -->
+    <div id="codeModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">مشاهده کد</h2>
+
+        <!-- تب‌بندی برای نمایش HTML, CSS و JS -->
+        <div class="tabs">
+          <button class="tab-btn active" data-target="html-code">HTML</button>
+          <button class="tab-btn" data-target="css-code">CSS</button>
+          <button class="tab-btn" data-target="js-code">JS</button>
+        </div>
+
+        <!-- کدها -->
+        <div class="code-container">
+          <pre id="html-code"><code class="language-html"></code></pre>
+          <pre
+            id="css-code"
+            style="display: none"><code class="language-css"></code></pre>
+          <pre
+            id="js-code"
+            style="display: none"><code class="language-js"></code></pre>
+        </div>
+
+        <!-- دکمه کپی -->
+        <button class="copy-btn" onclick="copyCode()">📋 کپی کد</button>
+      </div>
+    </div>
   </body>
   <script src="../../../js/bootstrap.bundle.min.js"></script>
   <script src="../../../js/app.js"></script>
+  <!-- Prism.js برای نمایش کدهای رنگی -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-html.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-javascript.min.js"></script>
   <script>
     // تشخیص موبایل
     function isMobileDevice() {
@@ -129,6 +166,7 @@
       }
     });
   </script>
+  <!-- todo: card Generator -->
   <script>
     fetch("../../../data/navbars.json")
       .then((response) => response.json())
@@ -153,5 +191,130 @@
         });
       })
       .catch((error) => console.error("خطا در دریافت اطلاعات نوبارها:", error));
+  </script>
+  <!-- todo: Codes of Modal of show code -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const modal = document.getElementById("codeModal");
+      const modalTitle = document.getElementById("modal-title");
+      const codeHtml = document
+        .getElementById("html-code")
+        .querySelector("code");
+      const codeCss = document.getElementById("css-code").querySelector("code");
+      const codeJs = document.getElementById("js-code").querySelector("code");
+      const closeModal = document.querySelector(".close");
+      const codeButtons = document.querySelectorAll(".code-btn");
+
+      document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("code-btn")) {
+          const navbarId = event.target.dataset.id;
+          console.log("navbarId:", navbarId); // چک کن که مقدار درست بیاد
+
+          modal.style.display = "block";
+          modalTitle.textContent = `کد ${navbarId}`;
+
+          // پاک کردن محتوای قبلی
+          codeHtml.innerHTML = "در حال بارگذاری...";
+          codeCss.innerHTML = "در حال بارگذاری...";
+          codeJs.innerHTML = "در حال بارگذاری...";
+
+          // بررسی مسیر صحیح
+          let basePath =
+            window.location.origin + "/projects/3-components/01-navbars/";
+
+          fetch(`${basePath}${navbarId}/index.html`)
+            .then((response) =>
+              response.ok
+                ? response.text()
+                : Promise.reject("خطا در دریافت فایل HTML")
+            )
+            .then((html) => {
+              codeHtml.textContent = html;
+              setTimeout(() => Prism.highlightElement(codeHtml), 200);
+            })
+            .catch(() => {
+              codeHtml.textContent =
+                "⚠️ فایل HTML یافت نشد! مسیر را بررسی کنید.";
+            });
+
+          fetch(`${basePath}${navbarId}/css/style.css`)
+            .then((response) =>
+              response.ok
+                ? response.text()
+                : Promise.reject("خطا در دریافت فایل CSS")
+            )
+            .then((css) => {
+              codeCss.textContent = css;
+              setTimeout(() => Prism.highlightElement(codeCss), 200);
+            })
+            .catch(() => {
+              codeCss.textContent = "⚠️ فایل CSS یافت نشد! مسیر را بررسی کنید.";
+            });
+
+          fetch(`${basePath}${navbarId}/js/script.js`)
+            .then((response) =>
+              response.ok
+                ? response.text()
+                : Promise.reject("خطا در دریافت فایل JavaScript")
+            )
+            .then((js) => {
+              codeJs.textContent = js;
+              setTimeout(() => Prism.highlightElement(codeJs), 200);
+            })
+            .catch(() => {
+              codeJs.textContent =
+                "⚠️ فایل JavaScript یافت نشد! مسیر را بررسی کنید.";
+            });
+        }
+      });
+
+      // بستن مودال
+      closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+
+      // مدیریت تب‌ها
+      document.querySelectorAll(".tab-btn").forEach((tab) => {
+        tab.addEventListener("click", function () {
+          document
+            .querySelectorAll(".tab-btn")
+            .forEach((btn) => btn.classList.remove("active"));
+          this.classList.add("active");
+
+          const target = this.getAttribute("data-target");
+          document
+            .querySelectorAll(".code-container pre")
+            .forEach((pre) => (pre.style.display = "none"));
+          document.getElementById(target).style.display = "block";
+        });
+      });
+    });
+
+    // تابع کپی کردن کد
+    function copyCode() {
+      const activeTab = document
+        .querySelector(".tab-btn.active")
+        .getAttribute("data-target");
+      const activeCode = document
+        .getElementById(activeTab)
+        .querySelector("code");
+      /*  */
+      if (activeCode) {
+        navigator.clipboard
+          .writeText(activeCode.textContent)
+          .then(() => {
+            alert("کد کپی شد!");
+          })
+          .catch((err) => {
+            console.error("خطا در کپی کردن کد:", err);
+          });
+      }
+    }
   </script>
 </html>

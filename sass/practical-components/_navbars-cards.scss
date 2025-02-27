@@ -1,0 +1,103 @@
+.modal-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 72vw; /* عرض ۹۰٪ از صفحه نمایش */
+  max-width: 1400px; /* حداکثر عرض ۱۲۰۰ پیکسل برای جلوگیری از بیش از حد بزرگ شدن */
+  max-height: 85vh;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  right: inherit !important;
+}
+
+.modal-content {
+  text-align: left;
+  padding: 20px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* بخش تب های مودال */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.tab-btn {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  background: #ddd;
+  margin: 0 5px;
+  transition: background 0.3s;
+
+  &.active {
+    background: #007bff;
+    color: white;
+  }
+}
+.tab-btn.active {
+  background: #007bff;
+  color: white;
+}
+
+/* برای بخش کد */
+.code-container {
+  max-height: 60vh;
+  overflow-y: auto;
+  text-align: left;
+  direction: ltr; /* تنظیم جهت از چپ به راست برای نمایش کدها */
+}
+
+/* اسکرول افقی برای کدهای طولانی */
+.code-container pre {
+  overflow-x: auto;
+  padding: 10px;
+  background: #282c34;
+  color: #ffffff;
+  border-radius: 5px;
+  white-space: pre-wrap; /* بگذار خطوط کد شکسته شوند */
+  word-wrap: break-word;
+}
+
+.copy-btn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .modal {
+    width: 90vw; /* عرض ۹۰٪ از صفحه نمایش */
+  }
+}
