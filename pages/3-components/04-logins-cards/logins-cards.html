@@ -132,6 +132,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-html.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-css.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-javascript.min.js"></script>
+
+  <!-- todo Mobile Recognize -->
   <script>
     // تشخیص موبایل
     function isMobileDevice() {
@@ -166,28 +168,28 @@
       }
     });
   </script>
-  <!-- todo: card Generator -->
+  <!-- todo: cards Generator -->
   <script>
-    fetch("../../../data/3-components/headers.json")
+    fetch("../../../data/3-components/logins.json")
       .then((response) => response.json())
-      .then((headers) => {
+      .then((logins) => {
         const container = document.getElementById("navbar-container");
-        headers.forEach((header) => {
-          const headerItem = `
+        logins.forEach((login) => {
+          const loginItem = `
                         <div class="col-md-4 col-sm-6 mb-4">
                             <div class="card shadow-sm" style="background:var(--navbar-bg)">
                                 <div class="ihover">
-                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${header.name}">
+                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${login.name}">
                                 </div>
                                 <div class="card-body text-center" style="color:var(--text-color)">
-                                    <h5 class="card-title">${header.name}</h5>
-                                    <a href="${header.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
-                                    <button class="btn btn-warning code-btn" data-id="${header.id}" data-name="${header.name}">مشاهده کد</button>
+                                    <h5 class="card-title">${login.name}</h5>
+                                    <a href="${login.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
+                                    <button class="btn btn-warning code-btn" data-id="${login.id}" data-name="${login.name}">مشاهده کد</button>
                                 </div>
                             </div>
                         </div>
                     `;
-          container.innerHTML += headerItem;
+          container.innerHTML += loginItem;
         });
       })
       .catch((error) => console.error("خطا در دریافت اطلاعات نوبارها:", error));
@@ -207,8 +209,8 @@
 
       document.addEventListener("click", function (event) {
         if (event.target.classList.contains("code-btn")) {
-          const headerName = event.target.dataset.name;
-          const headerId = event.target.dataset.id;
+          const loginName = event.target.dataset.name;
+          const loginId = event.target.dataset.id;
 
           modal.style.display = "block";
           // modalTitle.textContent = `${navbarName}`;
@@ -219,10 +221,9 @@
           codeJs.innerHTML = "در حال بارگذاری...";
 
           // بررسی مسیر صحیح
-          let basePath =
-            window.location.origin + "/projects/3-components/02-headers/";
+          let basePath = window.location.origin + "/projects/3-components/04-logins/";
 
-          fetch(`${basePath}${headerId}/index.html`)
+          fetch(`${basePath}${loginId}/index.html`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -251,7 +252,7 @@
           //     })
           //     .catch((error) => console.error("خطا در دریافت کد:", error));
           /* todo get Css Code */
-          fetch(`${basePath}${headerId}/css/style.css`)
+          fetch(`${basePath}${loginId}/css/style.css`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -300,6 +301,7 @@
           document
             .querySelectorAll(".tab-btn")
             .forEach((btn) => btn.classList.remove("active"));
+            
           this.classList.add("active");
 
           const target = this.getAttribute("data-target");
