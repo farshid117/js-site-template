@@ -236,22 +236,21 @@
               codeHtml.textContent =
                 "⚠️ فایل HTML یافت نشد! مسیر را بررسی کنید.";
             }); */
-
+          /* todo get Html Code */
           fetch(
-
-            "https://api.github.com/repos/farshid117/js-site-template/contents/projects/3-components/01-navbars/index.html",
-            {
-              headers: {
-                Accept: "application/vnd.github.v3.raw",
-              },
-            }
+            "https://raw.githubusercontent.com/farshid117/js-site-template/main/projects/3-components/01-navbars/index.html"
           )
-            .then((response) => response.text())
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("خطا در دریافت فایل");
+              }
+              return response.text();
+            })
             .then((html) => {
               document.getElementById("html-code").textContent = html;
             })
-            .catch((err) => console.error("خطا در دریافت کد:", err));
-
+            .catch((error) => console.error("خطا در دریافت کد:", error));
+          /* todo get Css Code */
           fetch(`${basePath}${navbarId}/css/style.css`)
             .then((response) =>
               response.ok
@@ -265,7 +264,7 @@
             .catch(() => {
               codeCss.textContent = "⚠️ فایل CSS یافت نشد! مسیر را بررسی کنید.";
             });
-
+          /* todo Get Js Code */
           fetch(`${basePath}${navbarId}/js/app.js`)
             .then((response) =>
               response.ok
