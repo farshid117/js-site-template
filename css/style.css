@@ -349,7 +349,6 @@ body {
   width: 150px;
   height: 150px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: var(--card-bg);
@@ -363,6 +362,12 @@ body {
 
 .category-box:hover {
   transform: scale(1.05);
+}
+
+.category-box a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .category-box-icon {
@@ -505,6 +510,11 @@ body {
 }
 /* js-template-project-index.html-styles */
 /* utilities */
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 /* استایل‌های پایه */
 .drak-light-pro-body {
   font-family: vazir, sans-serif;
@@ -514,24 +524,6 @@ body {
   color: var(--text-color);
   box-sizing: border-box;
   transition: all 0.5s;
-}
-
-/* بخش محصولات */
-.products {
-  padding: 2rem;
-  background-color: var(--products-bg);
-}
-
-.products h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: orange;
-}
-
-/* بخش سوم */
-.components .category-boxes a {
-  text-decoration: none;
-  color: #fff;
 }
 
 /* Responsive Styles */

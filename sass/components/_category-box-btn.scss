@@ -10,7 +10,6 @@
   width: 150px;
   height: 150px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: var(--card-bg);
@@ -23,6 +22,11 @@
 }
 .category-box:hover {
   transform: scale(1.05);
+}
+.category-box a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .category-box-icon {
   font-size: 30px;
