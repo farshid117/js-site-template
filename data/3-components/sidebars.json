@@ -2,31 +2,31 @@
   {
     "id": "01-sidebar1",
     "name": "ساید بار منوی شیشه ای بازشونده",
-    "demoPath": "../../../projects/3-components/03-sidebar/01-sidebar1/index.html"
+    "demoPath": "../../../projects/3-components/03-sidebars/01-sidebar1/index.html"
   },
   {
     "id": "02-sidebar2",
     "name": "سایدبار 2",
-    "demoPath": "../../../projects/3-components/03-sidebar/02-sidebar2/index.html"
+    "demoPath": "../../../projects/3-components/03-sidebars/02-sidebar2/index.html"
   },
   {
     "id": "03-sidebar3",
     "name": "سایدبار 3",
-    "demoPath": "../../../projects/3-components/03-sidebar/03-sidebar3/index.html"
+    "demoPath": "../../../projects/3-components/03-sidebars/03-sidebar3/index.html"
   },
   {
     "id": "04-sidebar4",
     "name": "سایدبار 4",
-    "demoPath": "../../../projects/3-components/03-sidebar/04-sidebar4/index.html"
+    "demoPath": "../../../projects/3-components/03-sidebars/04-sidebar4/index.html"
   },
   {
     "id": "05-sidebar5",
     "name": "سایدبار 5",
-    "demoPath": "../../../projects/3-components/03-sidebar/05-sidebar5/index.html"
+    "demoPath": "../../../projects/3-components/03-sidebars/05-sidebar5/index.html"
   },
   {
     "id": "06-sidebar6",
     "name": "سایدبار 6",
-    "demoPath": "../../../projects/3-components/03-sidebar/06-sidebar6/index.html"
+    "demoPath": "../../../projects/3-components/03-sidebars/06-sidebar6/index.html"
   }
 ]
