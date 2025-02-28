@@ -1,0 +1,32 @@
+[
+  {
+    "id": "01-login1",
+    "name": " باکس لیست آپلود فایل",
+    "demoPath": "../../../projects/3-components/07-others/01-file-uploader/index.html"
+  },
+  {
+    "id": "02-login2",
+    "name": "لاگین 2",
+    "demoPath": "../../../projects/3-components/07-others/02-login2/index.html"
+  },
+  {
+    "id": "03-login3",
+    "name": "لاگین 3",
+    "demoPath": "../../../projects/3-components/07-others/03-login3/index.html"
+  },
+  {
+    "id": "04-login4",
+    "name": "لاگین 4",
+    "demoPath": "../../../projects/3-components/07-others/04-login4/index.html"
+  },
+  {
+    "id": "05-login5",
+    "name": "لاگین 5",
+    "demoPath": "../../../projects/3-components/07-others/05-login5/index.html"
+  },
+  {
+    "id": "06-login6",
+    "name": "لاگین 6",
+    "demoPath": "../../../projects/3-components/07-others/06-login6/index.html"
+  }
+]
