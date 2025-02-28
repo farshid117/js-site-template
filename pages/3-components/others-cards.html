@@ -171,26 +171,26 @@
   </script>
   <!-- todo: card Generator -->
   <script>
-    fetch("../../../data/3-components/navbars.json")
+    fetch("../../../data/3-components/others.json")
       .then((response) => response.json())
-      .then((navbars) => {
+      .then((others) => {
         const container = document.getElementById("navbar-container");
-        navbars.forEach((navbar) => {
-          const navbarItem = `
+        others.forEach((other) => {
+          const otherItem = `
                         <div class="col-md-4 col-sm-6 mb-4">
                             <div class="card shadow-sm" style="background:var(--navbar-bg)">
                                 <div class="ihover">
-                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${navbar.name}">
+                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${other.name}">
                                 </div>
                                 <div class="card-body text-center" style="color:var(--text-color)">
-                                    <h5 class="card-title">${navbar.name}</h5>
-                                    <a href="${navbar.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
-                                    <button class="btn btn-warning code-btn" data-id="${navbar.id}" data-name="${navbar.name}">مشاهده کد</button>
+                                    <h5 class="card-title">${other.name}</h5>
+                                    <a href="${other.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
+                                    <button class="btn btn-warning code-btn" data-id="${other.id}" data-name="${other.name}">مشاهده کد</button>
                                 </div>
                             </div>
                         </div>
                     `;
-          container.innerHTML += navbarItem;
+          container.innerHTML += otherItem;
         });
       })
       .catch((error) => console.error("خطا در دریافت اطلاعات نوبارها:", error));
