@@ -171,26 +171,26 @@
   </script>
   <!-- todo: card Generator -->
   <script>
-    fetch("../../../data/3-components/others.json")
+    fetch("../../../data/3-components/sidebars.json")
       .then((response) => response.json())
-      .then((others) => {
+      .then((sidebars) => {
         const container = document.getElementById("navbar-container");
-        others.forEach((other) => {
-          const otherItem = `
+        sidebars.forEach((sidebar) => {
+          const sidebarItem = `
                         <div class="col-md-4 col-sm-6 mb-4">
                             <div class="card shadow-sm" style="background:var(--navbar-bg)">
                                 <div class="ihover">
-                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${other.name}">
+                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${sidebar.name}">
                                 </div>
                                 <div class="card-body text-center" style="color:var(--text-color)">
-                                    <h5 class="card-title">${other.name}</h5>
-                                    <a href="${other.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
-                                    <button class="btn btn-warning code-btn" data-id="${other.id}" data-name="${other.name}">مشاهده کد</button>
+                                    <h5 class="card-title">${sidebar.name}</h5>
+                                    <a href="${sidebar.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
+                                    <button class="btn btn-warning code-btn" data-id="${sidebar.id}" data-name="${sidebar.name}">مشاهده کد</button>
                                 </div>
                             </div>
                         </div>
                     `;
-          container.innerHTML += otherItem;
+          container.innerHTML += sidebarItem;
         });
       })
       .catch((error) => console.error("خطا در دریافت اطلاعات نوبارها:", error));
@@ -210,8 +210,8 @@
 
       document.addEventListener("click", function (event) {
         if (event.target.classList.contains("code-btn")) {
-          const otherName = event.target.dataset.name;
-          const otherId = event.target.dataset.id;
+          const sidebarName = event.target.dataset.name;
+          const sidebarId = event.target.dataset.id;
 
           modal.style.display = "block";
           // modalTitle.textContent = `${navbarName}`;
@@ -223,7 +223,7 @@
 
           // بررسی مسیر صحیح
           let basePath =
-            window.location.origin + "/projects/3-components/07-others/";
+            window.location.origin + "/projects/3-components/03-sidebars/";
           /* todo get Html Code */
           fetch(`${basePath}${otherId}/index.html`)
             .then((response) =>
