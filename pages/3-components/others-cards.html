@@ -210,8 +210,8 @@
 
       document.addEventListener("click", function (event) {
         if (event.target.classList.contains("code-btn")) {
-          const navbarName = event.target.dataset.name;
-          const navbarId = event.target.dataset.id;
+          const otherName = event.target.dataset.name;
+          const otherId = event.target.dataset.id;
 
           modal.style.display = "block";
           // modalTitle.textContent = `${navbarName}`;
@@ -223,9 +223,9 @@
 
           // بررسی مسیر صحیح
           let basePath =
-            window.location.origin + "/projects/3-components/01-navbars/";
+            window.location.origin + "/projects/3-components/07-others/";
           /* todo get Html Code */
-          fetch(`${basePath}${navbarId}/index.html`)
+          fetch(`${basePath}${otherId}/index.html`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -255,7 +255,7 @@
             .catch((error) => console.error("خطا در دریافت کد:", error)); */
 
           /* todo get Css Code */
-          fetch(`${basePath}${navbarId}/css/style.css`)
+          fetch(`${basePath}${otherId}/css/style.css`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -269,7 +269,7 @@
               codeCss.textContent = "⚠️ فایل CSS یافت نشد! مسیر را بررسی کنید.";
             });
           /* todo Get Js Code */
-          fetch(`${basePath}${navbarId}/js/app.js`)
+          fetch(`${basePath}${otherId}/js/app.js`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -316,12 +316,9 @@
 
     // تابع کپی کردن کد
     function copyCode() {
-      const activeTab = document
-        .querySelector(".tab-btn.active")
-        .getAttribute("data-target");
-      const activeCode = document
-        .getElementById(activeTab)
-        .querySelector("code");
+      const $ = document
+      const activeTab  = $.querySelector(".tab-btn.active").getAttribute("data-target");
+      const activeCode = $.getElementById(activeTab).querySelector("code");
       /*  */
       if (activeCode) {
         navigator.clipboard
