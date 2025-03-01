@@ -7,7 +7,7 @@ $('.owl-carousel').owlCarousel({
     autoplayTimeout: 2000, // Number
     center: true, // Boolean
     rtl: true, // Boolean
-    smartSpeed: 3000, // Boolean
+    smartSpeed: 4000, // Boolean
     items: 5, // Number
 
     responsive: {

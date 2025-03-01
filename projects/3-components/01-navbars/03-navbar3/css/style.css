@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins';
+  background-color: #17a2b8;
+}
+.section_tabs{
+  background-color: #ffff;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  padding: 30px;
+}
+
+.section_tabs h3{
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.section_tabs nav{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  height: 50px;
+  align-items: center;
+  position: relative;
+}
+.section_tabs nav label{
+  font-size: 17px;
+  color: #17a2b8;
+  cursor: pointer;
+  height: 100%;
+  width: 95px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+.section_tabs nav label:hover{
+  background-color: rgba(23,162,184,0.3);
+}
+.section_tabs input#home:checked ~ nav label.home,.section_tabs input#blog:checked ~ nav label.blog,.section_tabs input#code:checked ~ nav label.code,.section_tabs input#help:checked ~ nav label.help,.section_tabs input#about:checked ~ nav label.about{
+  color: #ffff;
+}
+.section_tabs input#blog:checked ~ nav .active_slide{
+  left: 103px;
+}
+.section_tabs input#code:checked ~ nav .active_slide{
+  left: 203px;
+}
+.section_tabs input#help:checked ~ nav .active_slide{
+  left: 300px;
+}
+.section_tabs input#help:checked ~ nav .active_slide{
+  left: 300px;
+}
+.section_tabs input#about:checked ~ nav .active_slide{
+  left: 400px;
+}
+.active_slide{
+  background-color: #17a2b8;
+  height: 100%;
+  width: 20%;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.content{
+  display: none;
+}
+.section_tabs input#home:checked ~ .content_tabs .content_home,.section_tabs input#blog:checked ~ .content_tabs .content_blog,.section_tabs input#code:checked ~ .content_tabs .content_code,.section_tabs input#help:checked ~ .content_tabs .content_help,.section_tabs input#about:checked ~ .content_tabs .content_about{
+  display: block;
+}
+.content h4{
+  font-size: 21px;
+  margin: 30px 0 10px 0;
+  font-weight: 500;
+}
+.content p{
+ text-align: justify;
+}
