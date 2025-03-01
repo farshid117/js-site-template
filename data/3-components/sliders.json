@@ -1,32 +1,32 @@
 [
   {
-    "id": "01-sidebar1",
-    "name": "ساید بار منوی شیشه ای بازشونده",
+    "id": "01-slider1",
+    "name": "اسلایدر با Owl",
     "demoPath": "../../../projects/3-components/06-sliders/01-slider1/index.html"
   },
   {
-    "id": "02-sidebar2",
-    "name": "سایدبار 2",
+    "id": "02-slider2",
+    "name": "اسلایدر 2",
     "demoPath": "../../../projects/3-components/06-sliders/02-slider2/index.html"
   },
   {
-    "id": "03-sidebar3",
-    "name": "سایدبار 3",
+    "id": "03-slider3",
+    "name": "اسلایدر 3",
     "demoPath": "../../../projects/3-components/06-sliders/03-slider3/index.html"
   },
   {
-    "id": "04-sidebar4",
-    "name": "سایدبار 4",
+    "id": "04-slider4",
+    "name": "اسلایدر 4",
     "demoPath": "../../../projects/3-components/06-sliders/04-slider4/index.html"
   },
   {
-    "id": "05-sidebar5",
-    "name": "سایدبار 5",
+    "id": "05-slider5",
+    "name": "اسلایدر 5",
     "demoPath": "../../../projects/3-components/06-sliders/05-slider5/index.html"
   },
   {
-    "id": "06-sidebar6",
-    "name": "سایدبار 6",
+    "id": "06-slider6",
+    "name": "اسلایدر 6",
     "demoPath": "../../../projects/3-components/06-sliders/06-slider6/index.html"
   }
 ]
