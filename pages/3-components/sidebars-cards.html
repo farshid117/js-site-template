@@ -171,26 +171,26 @@
   </script>
   <!-- todo: card Generator -->
   <script>
-    fetch("../../../data/3-components/sidebars.json")
+    fetch("../../../data/3-components/sliders.json")
       .then((response) => response.json())
-      .then((sidebars) => {
+      .then((sliders) => {
         const container = document.getElementById("navbar-container");
-        sidebars.forEach((sidebar) => {
-          const sidebarItem = `
+        sliders.forEach((slider) => {
+          const sliderItem = `
                         <div class="col-md-4 col-sm-6 mb-4">
                             <div class="card shadow-sm" style="background:var(--navbar-bg)">
                                 <div class="ihover">
-                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${sidebar.name}">
+                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${slider.name}">
                                 </div>
                                 <div class="card-body text-center" style="color:var(--text-color)">
-                                    <h5 class="card-title">${sidebar.name}</h5>
-                                    <a href="${sidebar.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
-                                    <button class="btn btn-warning code-btn" data-id="${sidebar.id}" data-name="${sidebar.name}">مشاهده کد</button>
+                                    <h5 class="card-title">${slider.name}</h5>
+                                    <a href="${slider.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
+                                    <button class="btn btn-warning code-btn" data-id="${slider.id}" data-name="${slider.name}">مشاهده کد</button>
                                 </div>
                             </div>
                         </div>
                     `;
-          container.innerHTML += sidebarItem;
+          container.innerHTML += sliderItem;
         });
       })
       .catch((error) => console.error("خطا در دریافت اطلاعات نوبارها:", error));
@@ -210,8 +210,8 @@
 
       document.addEventListener("click", function (event) {
         if (event.target.classList.contains("code-btn")) {
-          const sidebarName = event.target.dataset.name;
-          const sidebarId = event.target.dataset.id;
+          const sliderName = event.target.dataset.name;
+          const sliderId = event.target.dataset.id;
 
           modal.style.display = "block";
           // modalTitle.textContent = `${navbarName}`;
@@ -225,7 +225,7 @@
           let basePath =
             window.location.origin + "/projects/3-components/03-sidebars/";
           /* todo get Html Code */
-          fetch(`${basePath}${sidebarId}/index.html`)
+          fetch(`${basePath}${sliderId}/index.html`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -255,7 +255,7 @@
             .catch((error) => console.error("خطا در دریافت کد:", error)); */
 
           /* todo get Css Code */
-          fetch(`${basePath}${sidebarId}/css/style.css`)
+          fetch(`${basePath}${sliderId}/css/style.css`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -269,7 +269,7 @@
               codeCss.textContent = "⚠️ فایل CSS یافت نشد! مسیر را بررسی کنید.";
             });
           /* todo Get Js Code */
-          fetch(`${basePath}${sidebarId}/js/app.js`)
+          fetch(`${basePath}${sliderId}/js/app.js`)
             .then((response) =>
               response.ok
                 ? response.text()
