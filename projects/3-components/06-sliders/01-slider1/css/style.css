@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #1A237E;
+}
+img{
+    border-radius: 15px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    font-size: 50px !important;
+    color: aliceblue;
+}
+
+.owl-carousel .owl-nav button.owl-prev{
+    font-size: 50px !important;
+    margin-left: 50px !important;
+     color: aliceblue;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: 0;
+    color: rgb(30, 144, 244);
+}
