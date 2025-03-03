@@ -6,7 +6,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body{
   font-family:'Poppins' ;
   background-color: #0984e3;
@@ -18,7 +17,6 @@ body{
 .share_section{
   position: relative;
 }
-
 .share_section label{
   background-color: #fff;
   /*padding: 12px;
@@ -36,15 +34,10 @@ body{
   cursor: pointer;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
 }
 .share_section label:hover{
   letter-spacing: 2px;
 }
-
 .share_icon{
   background-color: #ffff;
   border-radius: 35px;
@@ -60,10 +53,6 @@ body{
   top: -122px;
   pointer-events: none;
   transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
 }
 #share_:checked + label .share_icon{
   opacity: 1;
@@ -82,17 +71,10 @@ body{
 }
 .share_icon a{
   color: #0984e3;
+  font-size: 30px;
   transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
 }
 .share_icon a:hover {
   color: #ff0000;
-  transform: translateY(-2px);
-  -webkit-transform: translateY(-2px);
-  -moz-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  -o-transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.7);
 }
