@@ -264,6 +264,12 @@
         <a id="instagram">
           <i class="fab fa-instagram instagram"></i>
         </a>
+        <a href="#" id="facebook">
+          <i class="fab fa-facebook facebook"></i>
+        </a>
+        <a href="#" id="youtube">
+          <i class="fab fa-youtube youtube"></i>
+        </a>
       </div>
 
       <p class="footer-number">شماره تماس: 09170431514</p>
@@ -289,6 +295,15 @@
         document
           .getElementById("instagram")
           .setAttribute("href", "instagram://user?username=ali.khayatpour");
+        document
+          .getElementById("facebook")
+          .setAttribute("href", "fb://profile/ali.khayatpour"); // لینک مخصوص اپلیکیشن فیس‌بوک
+        document
+          .getElementById("youtube")
+          .setAttribute(
+            "href",
+            "vnd.youtube://channel/UCvn2NieDN6n-fMxW8SgTTSQ?si=XFFv2mnOryaUeqG1"
+          );
       } else {
         document
           .getElementById("whatsapp")
@@ -302,6 +317,18 @@
         document
           .getElementById("instagram")
           .setAttribute("href", "https://www.instagram.com/ali.khayatpour");
+        document
+          .getElementById("facebook")
+          .setAttribute(
+            "href",
+            "https://www.facebook.com/profile.php?ali.khayatpour"
+          ); // لینک نسخه وب فیس‌بوک
+        document
+          .getElementById("youtube")
+          .setAttribute(
+            "href",
+            "https://www.youtube.com/channel/UCvn2NieDN6n-fMxW8SgTTSQ?si=XFFv2mnOryaUeqG1"
+          );
       }
     });
   </script>

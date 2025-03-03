@@ -271,18 +271,42 @@ body {
 }
 
 .social-icons a:hover {
-  transform: scale(1.2); /* افکت بزرگ‌شدن هنگام هاور */
+  transform: scale(1.4); /* افکت بزرگ‌شدن هنگام هاور */
 }
 
+/* .whatsapp { color: #25D366; } 
+.telegram { color: #0088cc; } 
+.instagram { color: #E1306C; } */
 .whatsapp {
-  color: #25D366;
-} /* سبز واتساپ */
+  background: linear-gradient(45deg, #25d366, #128c7e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .telegram {
-  color: #0088cc;
-} /* آبی تلگرام */
+  background: linear-gradient(45deg, #1877f2, #0a58ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .instagram {
-  color: #E1306C;
-} /* قرمز-بنفش اینستاگرام */
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.facebook {
+  background: linear-gradient(45deg, #1877f2, #0a58ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.youtube {
+  background: linear-gradient(45deg, #ff0000, #cc0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* card Product styles */
 .cards {
   display: flex;

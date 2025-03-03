@@ -4,35 +4,86 @@
     <meta charset="UTF-8" />
     <title></title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet"
-        href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
-
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css" />
   </head>
   <body>
-
     <div class="share_section">
-      <input type="checkbox" id="share_" hidden>
+      <input type="checkbox" id="share_" hidden />
       <label for="share_">
         <span>share</span>
         <div class="share_icon">
-          <a href="#">
+          <a href="#" id="facebook">
             <i class="fab fa-facebook"></i>
           </a>
-          <a href="#">
+          <a href="#" id="whatsapp">
             <i class="fab fa-whatsapp"></i>
           </a>
-          <a href="#">
+          <a href="#" id="instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="#">
+          <a href="#" id="youtube">
             <i class="fab fa-youtube"></i>
           </a>
-          <a href="#">
+          <a href="#" id="telegram">
             <i class="fab fa-telegram"></i>
           </a>
         </div>
       </label>
     </div>
-   
   </body>
+
+  <script>
+    // تشخیص موبایل
+    function isMobileDevice() {
+      return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
+    // تنظیم لینک‌های سوشال مدیا بر اساس دستگاه کاربر
+    document.addEventListener("DOMContentLoaded", function () {
+      if (isMobileDevice()) {
+        document
+          .getElementById("whatsapp")
+          .setAttribute("href", "https://wa.me/989170431514");
+        document
+          .getElementById("telegram")
+          .setAttribute("href", "tg://resolve?domain=farshid117");
+        document
+          .getElementById("instagram")
+          .setAttribute("href", "instagram://user?username=ali.khayatpour");
+        document
+          .getElementById("facebook")
+          .setAttribute("href", "fb://profile/ali.khayatpour"); // لینک مخصوص اپلیکیشن فیس‌بوک
+        document
+          .getElementById("youtube")
+          .setAttribute("href", "vnd.youtube://channel/UCvn2NieDN6n-fMxW8SgTTSQ?si=XFFv2mnOryaUeqG1");
+      } else {
+        document
+          .getElementById("whatsapp")
+          .setAttribute(
+            "href",
+            "https://web.whatsapp.com/send?phone=989170431514"
+          );
+        document
+          .getElementById("telegram")
+          .setAttribute("href", "https://t.me/farshid117");
+        document
+          .getElementById("instagram")
+          .setAttribute("href", "https://www.instagram.com/ali.khayatpour");
+        document
+          .getElementById("facebook")
+          .setAttribute(
+            "href",
+            "https://www.facebook.com/profile.php?ali.khayatpour"
+          ); // لینک نسخه وب فیس‌بوک
+        document
+          .getElementById("youtube")
+          .setAttribute(
+            "href",
+            "https://www.youtube.com/channel/UCvn2NieDN6n-fMxW8SgTTSQ?si=XFFv2mnOryaUeqG1"
+          );
+      }
+    });
+  </script>
 </html>
