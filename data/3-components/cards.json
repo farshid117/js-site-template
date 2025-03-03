@@ -1,0 +1,32 @@
+[
+  {
+    "id": "01-card1",
+    "name": "کارت 1",
+    "demoPath": "../../../projects/3-components/08-cards/01-card1/index.html"
+  },
+  {
+    "id": "02-card2",
+    "name": "کارت 2",
+    "demoPath": "../../../projects/3-components/08-cards/02-card2/index.html"
+  },
+  {
+    "id": "03-card3",
+    "name": "کارت 3",
+    "demoPath": "../../../projects/3-components/08-cards/03-card3/index.html"
+  },
+  {
+    "id": "04-card4",
+    "name": "کارت 4",
+    "demoPath": "../../../projects/3-components/08-cards/04-card4/index.html"
+  },
+  {
+    "id": "05-card5",
+    "name": "کارت 5",
+    "demoPath": "../../../projects/3-components/08-cards/05-card5/index.html"
+  },
+  {
+    "id": "06-card6",
+    "name": "کارت 6",
+    "demoPath": "../../../projects/3-components/08-cards/06-card6/index.html"
+  }
+]
