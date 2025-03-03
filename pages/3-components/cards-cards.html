@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لیست نوبارها</title>
+    <link rel="stylesheet" href="../../../css/bootstrap.rtl.css" />
+    <link rel="stylesheet" href="../../../css/iHover.css" />
+    <link rel="stylesheet" href="../../../css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css" />
+    <link rel="stylesheet" href="../../../css/style.css" />
+  </head>
+  <body class="drak-light-pro-body">
+    <!-- todo: Navbar نوار ناوبری -->
+    <nav class="navbar-dark-light-pro">
+      <h3 class="logo">
+        آکادمی <span class="academy-name">برنامه‌نویسِ نابغه</span>
+      </h3>
+      <span class="hamburger"><i class="fa fa-bars"></i></span>
+      <ul class="nav-links">
+        <li><a href="/index.html">خانه</a></li>
+        <li><a href="#products">محصولات</a></li>
+        <li><a href="#footer">تماس با ما</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-switch">تغییر تم</button>
+        </li>
+        <li></li>
+      </ul>
+    </nav>
+    <!-- todo Sidebar -->
+    <div class="sidebar">
+      <ul class="nav-links">
+        <li>
+          <a href="#header"><i class="fas fa-home sidebar-icon"></i> خانه</a>
+        </li>
+        <li>
+          <a href="#products"
+            ><i class="fas fa-box-open sidebar-icon"></i> محصولات</a
+          >
+        </li>
+        <li>
+          <a href="#footer"
+            ><i class="fas fa-phone-alt sidebar-icon"></i> تماس با ما</a
+          >
+        </li>
+        <li>
+          <a href="#footer"
+            ><i class="fab fa-whatsapp sidebar-icon"></i> پیام در واتساپ</a
+          >
+        </li>
+        <li>
+          <a href="#footer"
+            ><i class="fab fa-telegram-plane sidebar-icon"></i> پیام در
+            تلگرام</a
+          >
+        </li>
+        <li>
+          <a href="#footer"
+            ><i class="fas fa-sign-out-alt sidebar-icon"></i>
+            <span>خروج</span></a
+          >
+        </li>
+        <li>
+          <button id="theme-toggle-sidebar" class="theme-switch">
+            تغییر تم
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- todo: Main Section -->
+    <div class="container" style="margin-top: 150px; min-height: 100vh">
+      <h2 class="text-center mb-4">لیست انواع نوبارها</h2>
+      <div class="row" id="navbar-container"></div>
+    </div>
+
+    <!-- todo: Footer -->
+    <footer id="footer" class="footer-drak-light-pro">
+      <p class="footer-text">
+        آکادمی <span class="academy-name">برنامه‌نویسِ نابغه</span> با بیش از ۵
+        سال سابقه در آموزش و ارائه بهترین محصولات آموزشی!
+      </p>
+      <div class="social-icons">
+        <a id="whatsapp">
+          <i class="fab fa-whatsapp whatsapp"></i>
+        </a>
+        <a id="telegram">
+          <i class="fab fa-telegram-plane telegram"></i>
+        </a>
+        <a id="instagram">
+          <i class="fab fa-instagram instagram"></i>
+        </a>
+      </div>
+
+      <p class="footer-number">شماره تماس: 09170431514</p>
+    </footer>
+    <!-- todo: show Html-Css-js Modal -->
+    <!-- Modal برای نمایش کد -->
+    <div id="codeModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">مشاهده کد</h2>
+
+        <!-- تب‌بندی برای نمایش HTML, CSS و JS -->
+        <div class="tabs">
+          <button class="tab-btn active" data-target="html-code">HTML</button>
+          <button class="tab-btn" data-target="css-code">CSS</button>
+          <button class="tab-btn" data-target="js-code">JS</button>
+        </div>
+
+        <!-- کدها -->
+        <div class="code-container">
+          <pre id="html-code"><code class="language-html"></code></pre>
+          <pre
+            id="css-code"
+            style="display: none"><code class="language-css"></code></pre>
+          <pre
+            id="js-code"
+            style="display: none"><code class="language-js"></code></pre>
+        </div>
+
+        <!-- دکمه کپی -->
+        <button class="copy-btn" onclick="copyCode()">📋 کپی کد</button>
+      </div>
+    </div>
+  </body>
+
+  <script src="../../../js/bootstrap.bundle.min.js"></script>
+  <script src="../../../js/app.js"></script>
+  <!-- Prism.js برای نمایش کدهای رنگی -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-html.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-javascript.min.js"></script>
+
+  <!-- todo : Mobile Recognize -->
+  <script>
+    /*  تشخیص موبایل */
+    function isMobileDevice() {
+      return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
+    // تنظیم لینک‌های سوشال مدیا بر اساس دستگاه کاربر
+    document.addEventListener("DOMContentLoaded", function () {
+      if (isMobileDevice()) {
+        document
+          .getElementById("whatsapp")
+          .setAttribute("href", "https://wa.me/989170431514");
+        document
+          .getElementById("telegram")
+          .setAttribute("href", "tg://resolve?domain=farshid117");
+        document
+          .getElementById("instagram")
+          .setAttribute("href", "instagram://user?username=ali.khayatpour");
+      } else {
+        document
+          .getElementById("whatsapp")
+          .setAttribute(
+            "href",
+            "https://web.whatsapp.com/send?phone=989170431514"
+          );
+        document
+          .getElementById("telegram")
+          .setAttribute("href", "https://t.me/farshid117");
+        document
+          .getElementById("instagram")
+          .setAttribute("href", "https://www.instagram.com/ali.khayatpour");
+      }
+    });
+  </script>
+  <!-- todo: card Generator -->
+  <script>
+    fetch("../../../data/3-components/sliders.json")
+      .then((response) => response.json())
+      .then((sliders) => {
+        const container = document.getElementById("navbar-container");
+        sliders.forEach((slider) => {
+          const sliderItem = `
+                        <div class="col-md-4 col-sm-6 mb-4">
+                            <div class="card shadow-sm" style="background:var(--navbar-bg)">
+                                <div class="ihover">
+                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${slider.name}">
+                                </div>
+                                <div class="card-body text-center" style="color:var(--text-color)">
+                                    <h5 class="card-title">${slider.name}</h5>
+                                    <a href="${slider.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
+                                    <button class="btn btn-warning code-btn" data-id="${slider.id}" data-name="${slider.name}">مشاهده کد</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+          container.innerHTML += sliderItem;
+        });
+      })
+      .catch((error) => console.error("خطا در دریافت اطلاعات نوبارها:", error));
+  </script>
+  <!-- todo: Codes of Modal of show code -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const modal = document.getElementById("codeModal");
+      const modalTitle = document.getElementById("modal-title");
+      const codeHtml = document
+        .getElementById("html-code")
+        .querySelector("code");
+      const codeCss = document.getElementById("css-code").querySelector("code");
+      const codeJs = document.getElementById("js-code").querySelector("code");
+      const closeModal = document.querySelector(".close");
+      const codeButtons = document.querySelectorAll(".code-btn");
+
+      document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("code-btn")) {
+          const sliderName = event.target.dataset.name;
+          const sliderId = event.target.dataset.id;
+
+          modal.style.display = "block";
+          // modalTitle.textContent = `${navbarName}`;
+
+          // پاک کردن محتوای قبلی
+          codeHtml.innerHTML = "در حال بارگذاری...";
+          codeCss.innerHTML = "در حال بارگذاری...";
+          codeJs.innerHTML = "در حال بارگذاری...";
+
+          // بررسی مسیر صحیح
+          let basePath =
+            window.location.origin + "/projects/3-components/06-sliders/";
+          /* todo get Html Code */
+          fetch(`${basePath}${sliderId}/index.html`)
+            .then((response) =>
+              response.ok
+                ? response.text()
+                : Promise.reject("خطا در دریافت فایل HTML")
+            )
+            .then((html) => {
+              codeHtml.textContent = html;
+              setTimeout(() => Prism.highlightElement(codeHtml), 200);
+            })
+            .catch(() => {
+              codeHtml.textContent =
+                "⚠️ فایل HTML یافت نشد! مسیر را بررسی کنید.";
+            });
+
+          /*  fetch(
+            "https://raw.githubusercontent.com/farshid117/js-site-template/main/projects/3-components/01-navbars/index.html"
+          )
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("خطا در دریافت فایل");
+              }
+              return response.text();
+            })
+            .then((html) => {
+              document.getElementById("html-code").textContent = html;
+            })
+            .catch((error) => console.error("خطا در دریافت کد:", error)); */
+
+          /* todo get Css Code */
+          fetch(`${basePath}${sliderId}/css/style.css`)
+            .then((response) =>
+              response.ok
+                ? response.text()
+                : Promise.reject("خطا در دریافت فایل CSS")
+            )
+            .then((css) => {
+              codeCss.textContent = css;
+              setTimeout(() => Prism.highlightElement(codeCss), 200);
+            })
+            .catch(() => {
+              codeCss.textContent = "⚠️ فایل CSS یافت نشد! مسیر را بررسی کنید.";
+            });
+          /* todo Get Js Code */
+          fetch(`${basePath}${sliderId}/js/app.js`)
+            .then((response) =>
+              response.ok
+                ? response.text()
+                : Promise.reject("خطا در دریافت فایل JavaScript")
+            )
+            .then((js) => {
+              codeJs.textContent = js;
+              setTimeout(() => Prism.highlightElement(codeJs), 200);
+            })
+            .catch(() => {
+              codeJs.textContent =
+                "⚠️ فایل JavaScript یافت نشد! مسیر را بررسی کنید.";
+            });
+        }
+      });
+
+      // بستن مودال
+      closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+
+      // مدیریت تب‌ها
+      document.querySelectorAll(".tab-btn").forEach((tab) => {
+        tab.addEventListener("click", function () {
+          document
+            .querySelectorAll(".tab-btn")
+            .forEach((btn) => btn.classList.remove("active"));
+          this.classList.add("active");
+
+          const target = this.getAttribute("data-target");
+          document
+            .querySelectorAll(".code-container pre")
+            .forEach((pre) => (pre.style.display = "none"));
+          document.getElementById(target).style.display = "block";
+        });
+      });
+    });
+
+    // تابع کپی کردن کد
+    function copyCode() {
+      const $ = document
+      const activeTab  = $.querySelector(".tab-btn.active").getAttribute("data-target");
+      const activeCode = $.getElementById(activeTab).querySelector("code");
+      /*  */
+      if (activeCode) {
+        navigator.clipboard
+          .writeText(activeCode.textContent)
+          .then(() => {
+            alert("کد کپی شد!");
+          })
+          .catch((err) => {
+            console.error("خطا در کپی کردن کد:", err);
+          });
+      }
+    }
+  </script>
+</html>
