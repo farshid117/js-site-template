@@ -11,22 +11,22 @@
   },
   {
     "id": "03-navbar3",
-    "name": "نوبار 3",
+    "name": "تب نویگیشن اسلایدی بدون js",
     "demoPath": "../../../projects/3-components/01-navbars/03-navbar3/index.html"
   },
   {
-    "id": "04-navbar1",
+    "id": "04-navbar4",
     "name": "نوبار 4",
-    "demoPath": "../../../projects/3-components/01-navbars/01-navbar1/index.html"
+    "demoPath": "../../../projects/3-components/01-navbars/04-navbar4/index.html"
   },
   {
-    "id": "05-navbar2",
+    "id": "05-navbar5",
     "name": "نوبار 5",
-    "demoPath": "../../../projects/3-components/01-navbars/02-navbar2/index.html"
+    "demoPath": "../../../projects/3-components/01-navbars/05-navbar5/index.html"
   },
   {
-    "id": "06-navbar3",
+    "id": "06-navbar6",
     "name": "نوبار 6",
-    "demoPath": "../../../projects/3-components/01-navbars/03-navbar3/index.html"
+    "demoPath": "../../../projects/3-components/01-navbars/06-navbar6/index.html"
   }
 ]
