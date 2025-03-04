@@ -1,12 +1,12 @@
 [
   {
     "id": "01-login1",
-    "name": "لاگین 1",
+    "name": "لاگین شیشه ای  ریسپانسیو",
     "demoPath": "../../../projects/3-components/04-logins/01-login1/index.html"
   },
   {
     "id": "02-login2",
-    "name": "لاگین 2",
+    "name": "فرم لاگین نئومورفیسم",
     "demoPath": "../../../projects/3-components/04-logins/02-login2/index.html"
   },
   {
