@@ -91,10 +91,17 @@
         <a id="instagram">
           <i class="fab fa-instagram instagram"></i>
         </a>
+        <a href="#" id="facebook">
+          <i class="fab fa-facebook facebook"></i>
+        </a>
+        <a href="#" id="youtube">
+          <i class="fab fa-youtube youtube"></i>
+        </a>
       </div>
 
       <p class="footer-number">شماره تماس: 09170431514</p>
     </footer>
+
     <!-- todo: show Html-Css-js Modal -->
     <!-- Modal برای نمایش کد -->
     <div id="codeModal" class="modal" style="display: none">
@@ -141,7 +148,7 @@
       return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     }
 
-    // تنظیم لینک‌های سوشال مدیا بر اساس دستگاه کاربر
+     // تنظیم لینک‌های سوشال مدیا بر اساس دستگاه کاربر
     document.addEventListener("DOMContentLoaded", function () {
       if (isMobileDevice()) {
         document
@@ -153,6 +160,15 @@
         document
           .getElementById("instagram")
           .setAttribute("href", "instagram://user?username=ali.khayatpour");
+        document
+          .getElementById("facebook")
+          .setAttribute("href", "fb://profile/ali.khayatpour"); // لینک مخصوص اپلیکیشن فیس‌بوک
+        document
+          .getElementById("youtube")
+          .setAttribute(
+            "href",
+            "vnd.youtube://channel/UCvn2NieDN6n-fMxW8SgTTSQ?si=XFFv2mnOryaUeqG1"
+          );
       } else {
         document
           .getElementById("whatsapp")
@@ -166,6 +182,18 @@
         document
           .getElementById("instagram")
           .setAttribute("href", "https://www.instagram.com/ali.khayatpour");
+        document
+          .getElementById("facebook")
+          .setAttribute(
+            "href",
+            "https://www.facebook.com/profile.php?ali.khayatpour"
+          ); // لینک نسخه وب فیس‌بوک
+        document
+          .getElementById("youtube")
+          .setAttribute(
+            "href",
+            "https://www.youtube.com/channel/UCvn2NieDN6n-fMxW8SgTTSQ?si=XFFv2mnOryaUeqG1"
+          );
       }
     });
   </script>
@@ -316,8 +344,9 @@
 
     // تابع کپی کردن کد
     function copyCode() {
-      const $ = document
-      const activeTab  = $.querySelector(".tab-btn.active").getAttribute("data-target");
+      const $ = document;
+      const activeTab =
+        $.querySelector(".tab-btn.active").getAttribute("data-target");
       const activeCode = $.getElementById(activeTab).querySelector("code");
       /*  */
       if (activeCode) {
