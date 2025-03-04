@@ -171,26 +171,26 @@
   </script>
   <!-- todo: card Generator -->
   <script>
-    fetch("../../../data/3-components/sliders.json")
+    fetch("../../../data/3-components/cards.json")
       .then((response) => response.json())
-      .then((sliders) => {
+      .then((cards) => {
         const container = document.getElementById("navbar-container");
-        sliders.forEach((slider) => {
-          const sliderItem = `
+        cards.forEach((card) => {
+          const cardItem = `
                         <div class="col-md-4 col-sm-6 mb-4">
                             <div class="card shadow-sm" style="background:var(--navbar-bg)">
                                 <div class="ihover">
-                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${slider.name}">
+                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${card.name}">
                                 </div>
                                 <div class="card-body text-center" style="color:var(--text-color)">
-                                    <h5 class="card-title">${slider.name}</h5>
-                                    <a href="${slider.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
-                                    <button class="btn btn-warning code-btn" data-id="${slider.id}" data-name="${slider.name}">مشاهده کد</button>
+                                    <h5 class="card-title">${card.name}</h5>
+                                    <a href="${card.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
+                                    <button class="btn btn-warning code-btn" data-id="${card.id}" data-name="${card.name}">مشاهده کد</button>
                                 </div>
                             </div>
                         </div>
                     `;
-          container.innerHTML += sliderItem;
+          container.innerHTML += cardItem;
         });
       })
       .catch((error) => console.error("خطا در دریافت اطلاعات نوبارها:", error));
@@ -210,8 +210,8 @@
 
       document.addEventListener("click", function (event) {
         if (event.target.classList.contains("code-btn")) {
-          const sliderName = event.target.dataset.name;
-          const sliderId = event.target.dataset.id;
+          const cardName = event.target.dataset.name;
+          const cardId = event.target.dataset.id;
 
           modal.style.display = "block";
           // modalTitle.textContent = `${navbarName}`;
@@ -223,9 +223,9 @@
 
           // بررسی مسیر صحیح
           let basePath =
-            window.location.origin + "/projects/3-components/06-sliders/";
+            window.location.origin + "/projects/3-components/08-cards/";
           /* todo get Html Code */
-          fetch(`${basePath}${sliderId}/index.html`)
+          fetch(`${basePath}${cardId}/index.html`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -255,7 +255,7 @@
             .catch((error) => console.error("خطا در دریافت کد:", error)); */
 
           /* todo get Css Code */
-          fetch(`${basePath}${sliderId}/css/style.css`)
+          fetch(`${basePath}${cardId}/css/style.css`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -269,7 +269,7 @@
               codeCss.textContent = "⚠️ فایل CSS یافت نشد! مسیر را بررسی کنید.";
             });
           /* todo Get Js Code */
-          fetch(`${basePath}${sliderId}/js/app.js`)
+          fetch(`${basePath}${cardId}/js/app.js`)
             .then((response) =>
               response.ok
                 ? response.text()
