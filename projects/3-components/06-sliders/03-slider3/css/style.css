@@ -1,5 +1,5 @@
 body {
-  background-color: #222;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,8 +7,8 @@ body {
   overflow: hidden;
 }
 .swiper {
-  width: 220px; /* عرض کل اسلایدر */
-  height: 350px; /* ارتفاع کل اسلایدر */
+  width: 350px !important; /* عرض کل اسلایدر */
+  height:500px !important; /* ارتفاع کل اسلایدر */
 }
 .swiper-slide {
   display: flex;
@@ -18,11 +18,16 @@ body {
   font-weight: bold;
   color: white;
   border-radius: 15px;
-  width: 180px; /* عرض هر اسلاید */
-  height: 320px; /* ارتفاع هر اسلاید */
+  width: 300px; /* عرض هر اسلاید */
+  height: 500px; /* ارتفاع هر اسلاید */
+}
+.swiper-slide img {
+    object-fit: cover !important;
+    object-position:center !important;
+    border-radius: 30px;
 }
 .slide1 {
-  background-color: red;
+  background-color: purple; 
 }
 .slide2 {
   background-color: blue;
