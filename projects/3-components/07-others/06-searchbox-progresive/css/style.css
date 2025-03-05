@@ -13,7 +13,7 @@ body{
   align-items: center;
   justify-content: center;
   font-family: 'Poppins';
-  background-color: #FF676D;
+  background-color: #1A237E ;
 }
 
 .search_box{
@@ -29,10 +29,6 @@ body{
   position: relative;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
 }
 .search_box_content input{
   border: none;
