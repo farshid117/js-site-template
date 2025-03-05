@@ -1,0 +1,133 @@
+<!-- 
+
+ <!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiperJS Cards Effect</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        body {
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .swiper {
+            width: 350px;
+            height: 220px;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            border-radius: 15px;
+            width: 320px;
+            height: 180px;
+        }
+        .slide1 { background-color: red; }
+        .slide2 { background-color: blue; }
+        .slide3 { background-color: green; }
+        .slide4 { background-color: orange; }
+        .slide5 { background-color: purple; }
+    </style>
+</head>
+<body>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">Slide 1</div>
+            <div class="swiper-slide slide2">Slide 2</div>
+            <div class="swiper-slide slide3">Slide 3</div>
+            <div class="swiper-slide slide4">Slide 4</div>
+            <div class="swiper-slide slide5">Slide 5</div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "cards",
+            grabCursor: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+</html>
+ -->
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>افکت کارت‌های عمودی با SwiperJS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        body {
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .swiper {
+            width: 220px; /* عرض کل اسلایدر */
+            height: 350px; /* ارتفاع کل اسلایدر */
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            border-radius: 15px;
+            width: 180px; /* عرض هر اسلاید */
+            height: 320px; /* ارتفاع هر اسلاید */
+        }
+        .slide1 { background-color: red; }
+        .slide2 { background-color: blue; }
+        .slide3 { background-color: green; }
+        .slide4 { background-color: orange; }
+        .slide5 { background-color: purple; }
+    </style>
+</head>
+<body>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">اسلاید ۱</div>
+            <div class="swiper-slide slide2">اسلاید ۲</div>
+            <div class="swiper-slide slide3">اسلاید ۳</div>
+            <div class="swiper-slide slide4">اسلاید ۴</div>
+            <div class="swiper-slide slide5">اسلاید ۵</div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "cards",
+            grabCursor: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+</html>

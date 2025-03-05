@@ -1,82 +1,81 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Poppins';
-    background-color: #7D2AE8;
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+  background-color: #000;
 }
 
-.container{
-    max-width: 800px;
-    height: 500px;
-    width: 100%;
-    border: 7px solid #fff;
-    border-radius: 20px;
-    overflow: hidden;
+.container {
+  max-width: 800px;
+  height: 500px;
+  width: 100%;
+  border: 7px solid #fff;
+  border-radius: 20px;
+  overflow: hidden;
 }
-.img_row_slider{
-    display: flex;
-    height: 100%;
-    width: 400%;
-    animation: slider_animation 10s linear infinite;
-    -webkit-animation: slider_animation 10s linear infinite;
+.img_row_slider {
+  display: flex;
+  height: 100%;
+  width: 400%;
+  animation: slider_animation 10s linear infinite;
+  -webkit-animation: slider_animation 10s linear infinite;
 }
-.img_row_slider:hover{
-    animation-play-state: paused;
+.img_row_slider:hover {
+  animation-play-state: paused;
 }
 .slide {
-    position: relative;
+  position: relative;
 }
-.slide , .slide img{
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-
-.slide img{
-    object-fit: cover;
+.slide,
+.slide img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
-@keyframes slider_animation{
-    0%{
-        margin-left: 0;
-    }
+.slide img {
+  object-fit: cover;
+}
 
-    100%{
-        margin-left: -300%;
-    }
-}
-.slide_cpation{
-    position: absolute;
-    top: 0;
-    background-color: rgba(0,0,0,0.7);
-    color: #fff;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+@keyframes slider_animation {
+  0% {
+    margin-left: 0;
+  }
 
+  100% {
+    margin-left: -300%;
+  }
 }
-.slide_cpation h5{
-    font-size: 3rem;
-    margin-bottom: 2rem;
+.slide_cpation {
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
 }
-.slide:hover .slide_cpation{
-    opacity: 1;
-    visibility: visible;
+.slide_cpation h5 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.slide:hover .slide_cpation {
+  opacity: 1;
+  visibility: visible;
 }
