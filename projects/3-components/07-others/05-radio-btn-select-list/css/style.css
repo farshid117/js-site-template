@@ -1,39 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Poppins';
+  font-family: "Poppins";
+  background-color: #D1C4E9 ;
 }
 
-.container{
+.container {
   background-color: #fff;
   width: 350px;
   height: 370px;
   border-radius: 10px;
-  box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
-.header_option{
-  background-color: #333;
+.header_option {
+  background-color: #311B92;
   color: #fff;
   text-align: center;
-  line-height: 65px;
+  line-height: 80px;
   font-size: 25px;
   font-weight: 500;
 }
-.list_option{
-  padding: 20px 30px;
+.header_option span {
+  color: #fff;
 }
-.list_option label{
+.list_option {
+  padding: 20px 30px;
+  background-color: #fff;
+}
+.list_option label {
   border: 1px solid #d3d3d3;
   display: block;
   height: 53px;
@@ -43,53 +48,46 @@ body{
   padding-left: 20px;
   margin: 10px 0;
   transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
+  cursor: pointer;
 }
-.dot{
+.dot {
   width: 20px;
   height: 20px;
   background-color: #d9d9d9;
   border-radius: 100%;
   position: relative;
 }
-.dot::before{
-  content: '';
-  width: 9px;
-  height: 9px;
+.dot::before {
+  content: "";
+  width: 10px;
+  height: 10px;
   display: block;
   border-radius: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(2);
-  transition: all 0.3s ease;
-
+  transition: all 0.1s ease;
 }
-.text{
+.text {
   padding-left: 10px;
   font-size: 18px;
   color: #333;
   font-weight: 400;
   transition: all 0.3s ease;
+  display: inline;
 }
 
-.list_option input:checked + label{
-  background-color: #333;
+.list_option input:checked + label {
+  background-color: #512DA8;
 }
-.list_option input:checked + label .text{
-    color: #fff;
+.list_option input:checked + label .text {
+  color: #fff;
 }
-.list_option input:checked + label .dot{
+.list_option input:checked + label .dot {
   background-color: #fff;
 }
-.list_option input:checked + label .dot::before{
+.list_option input:checked + label .dot::before {
   background-color: #444;
   transform: translate(-50%, -50%) scale(1);
-  -webkit-transform: translate(-50%, -50%) scale(1);
-  -moz-transform: translate(-50%, -50%) scale(1);
-  -ms-transform: translate(-50%, -50%) scale(1);
-  -o-transform: translate(-50%, -50%) scale(1);
 }
