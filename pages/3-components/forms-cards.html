@@ -198,26 +198,26 @@
   </script>
   <!-- todo: cards Generator -->
   <script>
-    fetch("../../../data/3-components/logins.json")
+    fetch("../../../data/3-components/forms.json")
       .then((response) => response.json())
-      .then((logins) => {
+      .then((forms) => {
         const container = document.getElementById("navbar-container");
-        logins.forEach((login) => {
-          const loginItem = `
+        forms.forEach((form) => {
+          const formItem = `
                         <div class="col-md-4 col-sm-6 mb-4">
                             <div class="card shadow-sm" style="background:var(--navbar-bg)">
                                 <div class="ihover">
-                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${login.name}">
+                                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="${form.name}">
                                 </div>
                                 <div class="card-body text-center" style="color:var(--text-color)">
-                                    <h5 class="card-title">${login.name}</h5>
-                                    <a href="${login.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
-                                    <button class="btn btn-warning code-btn" data-id="${login.id}" data-name="${login.name}">مشاهده کد</button>
+                                    <h5 class="card-title">${form.name}</h5>
+                                    <a href="${form.demoPath}" target="_blank" class="btn btn-primary">مشاهده دمو</a>
+                                    <button class="btn btn-warning code-btn" data-id="${form.id}" data-name="${form.name}">مشاهده کد</button>
                                 </div>
                             </div>
                         </div>
                     `;
-          container.innerHTML += loginItem;
+          container.innerHTML += formItem;
         });
       })
       .catch((error) => console.error("خطا در دریافت اطلاعات نوبارها:", error));
@@ -237,8 +237,8 @@
 
       document.addEventListener("click", function (event) {
         if (event.target.classList.contains("code-btn")) {
-          const loginName = event.target.dataset.name;
-          const loginId = event.target.dataset.id;
+          const formName = event.target.dataset.name;
+          const formId = event.target.dataset.id;
 
           modal.style.display = "block";
           // modalTitle.textContent = `${navbarName}`;
@@ -250,9 +250,9 @@
 
           // بررسی مسیر صحیح
           let basePath =
-            window.location.origin + "/projects/3-components/04-logins/";
+            window.location.origin + "/projects/3-components/04-forms/";
 
-          fetch(`${basePath}${loginId}/index.html`)
+          fetch(`${basePath}${formId}/index.html`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -281,7 +281,7 @@
           //     })
           //     .catch((error) => console.error("خطا در دریافت کد:", error));
           /* todo get Css Code */
-          fetch(`${basePath}${loginId}/css/style.css`)
+          fetch(`${basePath}${formId}/css/style.css`)
             .then((response) =>
               response.ok
                 ? response.text()
@@ -296,7 +296,7 @@
             });
 
           /* todo Get Js Code */
-          fetch(`${basePath}${headerId}/js/app.js`)
+          fetch(`${basePath}${formId}/js/app.js`)
             .then((response) =>
               response.ok
                 ? response.text()
