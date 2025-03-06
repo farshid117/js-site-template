@@ -11,12 +11,12 @@
   },
   {
     "id": "03-form3",
-    "name": "فرم با اعتبارسنجی SweetAlert",
+    "name": "فرم با اعتبارسنجی SweetAlert1",
     "demoPath": "../../../projects/3-components/04-forms/03-form3/index.html"
   },
   {
     "id": "04-form4",
-    "name": "فرم 4",
+    "name": "فرم با اعتبارسنجی SweetAlert2(Toast)",
     "demoPath": "../../../projects/3-components/04-forms/04-form4/index.html"
   },
   {
