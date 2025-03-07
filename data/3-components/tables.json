@@ -1,0 +1,32 @@
+[
+  {
+    "id": "01-table1",
+    "name": "جدول 1",
+    "demoPath": "../../../projects/3-components/05-tables/01-table1/index.html"
+  },
+  {
+    "id": "02-table2",
+    "name": "جدول 2",
+    "demoPath": "../../../projects/3-components/05-tables/02-table2/index.html"
+  },
+  {
+    "id": "03-table3",
+    "name": "جدول 3",
+    "demoPath": "../../../projects/3-components/05-tables/03-table3/index.html"
+  },
+  {
+    "id": "04-table4",
+    "name": "جدول 4",
+    "demoPath": "../../../projects/3-components/05-tables/04-table4/index.html"
+  },
+  {
+    "id": "05-table5",
+    "name": "جدول 5",
+    "demoPath": "../../../projects/3-components/05-tables/05-table5/index.html"
+  },
+  {
+    "id": "06-table6",
+    "name": "جدول 6",
+    "demoPath": "../../../projects/3-components/05-tables/06-table6/index.html"
+  }
+]
