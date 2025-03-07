@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgb(25, 108, 81);
+  background-color: #0a137a;
 }
 
 .bottom-nav-fixed {
@@ -23,7 +23,7 @@ body {
   background-color: #fff;
   width: 39rem;
   height: 6rem;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 20px 20px 5px 5px;
   padding: 1rem;
 }
 .bottom-nav label {
@@ -36,23 +36,24 @@ body {
 }
 .bottom-nav label i {
   font-size: 2.5rem;
-  color: #6520a5;
+  color: #283593;
   position: relative;
   z-index: 10;
-  transition: transform 0.4s ease;
+  transition:  0.4s ;
 
+}
+.bottom-nav input + label::before{
+    transition: .4s;
 }
 .bottom-nav input:checked + label::before {
   content: "";
   position: absolute;
-  background-color: #6520a5;
+  background-color: #283593;
   color: #fff;
   width: 60px;
   height: 60px;
   border-radius: 100%;
-
   z-index: 5;
-  transition: transform 0.4s ease;
   box-shadow: 0 5rem 7rem rgba(0, 0, 0, 0.6);
 }
 .bottom-nav input:checked + label i {
@@ -82,7 +83,7 @@ body {
     width: 26rem;
   }
   .bottom-nav label i {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   .bottom-nav label {
     width: 4rem;
