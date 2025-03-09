@@ -7,26 +7,26 @@
   {
     "id": "02-header2",
     "name": "هدر پیشرفته سایت واقعیت مجازی",
-    "demoPath": "../../../projects/3-components/01-headers/02-header2/index.html"
+    "demoPath": "../../../projects/3-components/02-headers/02-header2/index.html"
   },
   {
     "id": "03-header3",
     "name": "هدر 3",
-    "demoPath": "../../../projects/3-components/01-headers/03-header3/index.html"
+    "demoPath": "../../../projects/3-components/02-headers/03-header3/index.html"
   },
   {
     "id": "04-header4",
     "name": "هدر 4",
-    "demoPath": "../../../projects/3-components/01-headers/04-header4/index.html"
+    "demoPath": "../../../projects/3-components/02-headers/04-header4/index.html"
   },
   {
     "id": "05-header5",
     "name": "هدر 5",
-    "demoPath": "../../../projects/3-components/01-headers/05-header5/index.html"
+    "demoPath": "../../../projects/3-components/02-headers/05-header5/index.html"
   },
   {
     "id": "06-header6",
     "name": "هدر 6",
-    "demoPath": "../../../projects/3-components/01-headers/06-header6/index.html"
+    "demoPath": "../../../projects/3-components/02-headers/06-header6/index.html"
   }
 ]
