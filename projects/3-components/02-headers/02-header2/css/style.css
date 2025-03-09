@@ -103,6 +103,10 @@ img{
     color: #fff;
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
+    cursor: pointer;
+}
+.conetnt button{
+
 }
 .conetnt p{
     font-size: 0.7rem;
