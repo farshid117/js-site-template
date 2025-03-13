@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+ font-family: Sora;
+ overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/Sora-Light.ttf') ;
+}
+@font-face {
+    font-family: 'Sora_blod';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/Sora-Bold.ttf') ;
+}
+
+:root{
+    --color_005025:#005025;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+.header_content{
+    background-color: var(--color_005025);
+    position: relative;
+    border-radius: 0 0 140px 140px;
+    margin-bottom: 20rem;
+}
+.navgation_header{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    align-items: center;
+}
+.log{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.log img{
+    width: 34px;
+    position: relative;
+    top: -4px;
+}
+.log span{
+    color: #ffff;
+    font-weight: 600;
+    font-size: 24px;
+}
+.center_nav ul{
+    display: flex;
+    gap: 4rem;
+}
+.center_nav ul li a.cative{
+    color: #fff;
+    font-weight: 600;
+}
+.center_nav ul li a.cative::after{
+    content: '';
+    border-bottom: 2px solid #fff;
+    width: 23px;
+    height: 2px;
+    display: block;
+    position: relative;
+    left: 15px;
+    top: 3px;
+}
+.center_nav ul li a{
+    color: rgba(255, 255, 255, 0.6);
+}
+.link_nav{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.link_nav a{
+    color: #fff;
+}
+.link_nav a.active{
+    background-color: #ffff;
+    color: #000;
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.content_header{
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 14rem;
+}
+.content_img{
+    max-width: 600px;
+}
+img{
+    width: 100%;
+}
+.content_text {
+    width: 50%;
+    position: relative;
+    top: -57px;
+}
+.content_text h1{
+    font-size: 60px;
+    color: #fff;
+    font-weight: 600;
+}
+.content_text p{
+    color: rgba(255, 255, 255, 0.6);
+    margin: 2rem 0;
+    font-size: 18px;
+}
+.content_text a{
+    font-family: Sora_blod;
+    background-color: #ffff;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 7px;
+    box-shadow: 10px 10px 48px #01381B;
+}
+
+.bottom_head{
+    width: 600px;
+    position: absolute;
+    right: 0px;
+    bottom: -11px;
+}
+
+.book_now{
+    background-color: #fff;
+    max-width: 1170px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    border-radius: 12px;
+    box-shadow: 0 4px 60px rgba(0, 24, 11, 0.16);
+    bottom: -23px;
+}
+
+.book_now form{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 2rem 1.5rem;
+}
+
+.input_form{
+    width: 88%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.group{
+    padding: 0 12px;
+    /* width: 130px; */
+    position: relative;
+}
+.arrow_iocn::after{
+    content: '';
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 46px;
+    right: 46px;
+    transform: rotate(43deg);
+}
+.group:not(:first-child){
+
+    border-left: 2px solid rgba(0,0,0,0.3);
+}
+.group label{
+    color: rgba(0,0,0,0.6);
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+.group input{
+    border: none;
+    width: 100%;
+    height: 40px;
+}
+.group input::placeholder{
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn_form button{
+    background: #7D261C;
+    color: #fff;
+    border: none;
+    padding: 16px 29px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+@media screen and (max-width:999px) {
+    .content_header {
+        flex-direction: column-reverse;
+    }
+    .content_text{
+        width: 90%;
+        top: 0;
+        margin: 6rem 0;
+    }
+    .content_img {
+        max-width: 359px;
+    }
+    .book_now form {
+        flex-direction: column;
+    }
+    .input_form{
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    .arrow_iocn::after{
+        right: 26px;
+    }
+}
