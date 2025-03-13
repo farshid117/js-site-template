@@ -224,7 +224,8 @@ img{
     .content_text{
         width: 90%;
         top: 0;
-        margin: 6rem 0;
+        margin: 5rem 0 2rem;
+        text-align: center;
     }
     .content_img {
         max-width: 359px;
@@ -238,5 +239,26 @@ img{
     }
     .arrow_iocn::after{
         right: 26px;
+    }
+}
+@media screen and (max-width:800px) {
+    .content_header {
+        
+    }
+    .content_text{
+        
+        
+    }
+    .content_img {
+       
+    }
+    .book_now form {
+       
+    }
+    .input_form{
+      
+    }
+    .arrow_iocn::after{
+      
     }
 }
