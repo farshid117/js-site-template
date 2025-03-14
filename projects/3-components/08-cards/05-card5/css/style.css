@@ -14,8 +14,8 @@
 :root {
   --color_fff: #fff;
 }
-::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar {
+  display: none;
 }
 body {
   font-family: Tanha;
@@ -58,7 +58,10 @@ section {
   font-size: 28px;
 }
 
-.price,ul,.item-price > h3,button {
+.price,
+ul,
+.item-price > h3,
+button {
   transform: skewY(4deg);
 }
 .price h3 {
@@ -115,22 +118,26 @@ button {
     margin-top: 50px;
   }
   .item-price {
-  transform: skewY(0deg);
-  text-align: center;
-  padding: 37px 22px;
-  border: 1px solid #464646;
-  transition: all 0.3s ease-in;
-}
- .item-price:hover{
+    transform: skewY(0deg);
+    text-align: center;
+    padding: 37px 22px;
+    border: 1px solid #464646;
+    transition: all 0.3s ease-in;
+  }
+  .item-price:hover {
     transform: scale(1.02);
- }
-.price,ul,.item-price > h3,button {
-  transform: skewY(0deg);
-}
-button{
+  }
+  .price,
+  ul,
+  .item-price > h3,
+  button {
+    transform: skewY(0deg);
+  }
+  button {
     font-size: 1.3rem;
-}
-ul li, .price span{
+  }
+  ul li,
+  .price span {
     font-size: 1.3rem;
-}
+  }
 }
