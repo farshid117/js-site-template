@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Tanha;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Tanha-FD.woff2') format('woff2');
+}
+
+
+:root{
+    --color_fff:#fff;
+}
+body{
+    font-family: Tanha;
+    background-color: #151515;
+}
+
+section{
+    padding: 62px 0;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 19px;
+}
+
+.content-price{
+    display: grid;
+    grid-template-columns: repeat(3,30%);
+    gap: 19px;
+    justify-content: center;
+    margin-top: 50px;
+}
+.header-title h2{
+    color: var(--color_fff);
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+.item-price{
+    transform: skewY(-4deg);
+    text-align: center;
+    padding: 37px 22px;
+    border: 1px solid #464646;
+    transition: all 0.3s ease-in;
+}
+
+.item-price > h3{
+    color: var(--color_fff);
+    font-size: 28px;
+}
+
+.price,ul,.item-price > h3 ,button{
+    transform: skewY(4deg);
+}
+.price h3{
+    color: #f36100;
+    font-size: 54px;
+    margin-bottom: 12px;
+}
+ul{
+    list-style-type: none;
+    margin: 38px 0px;
+}
+ul li{
+    margin-bottom: 5px;
+}
+ul li,.price span{
+    color: #c4c4c4;
+    font-weight: 700;
+}
+button{
+    width: 90%;
+    background-color: #333333;
+    color: #fff;
+    padding: 14px 24px;
+    font-size: 14px;
+    font-family: Tanha;
+    border: none;
+    font-weight: 300;
+    transition: all 0.3s ease-in;
+}
+
+.item-price:hover{
+    background-color: var(--color_fff);
+}
+.item-price:hover button{
+    background-color: #f36100;
+}
+.item-price:hover .price span{
+    color: #444444;
+}
+.item-price:hover .title-price,.item-price:hover ul li{
+    color: #000 !important;
+}
