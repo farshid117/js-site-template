@@ -308,6 +308,7 @@ img {
     font-size: 22px;
     align-items: flex-start;
     transition: .4s;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
   }
   .navgation_header.show{
      left: 0;
