@@ -1,21 +1,19 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 @font-face {
   font-family: Tanha;
   font-style: normal;
   font-weight: normal;
   src: url("../../../../../fonts/Tanha.woff2") format("woff2");
 }
-
 :root {
   --color_fff: #fff;
 }
 ::-webkit-scrollbar {
   display: none;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: Tanha;

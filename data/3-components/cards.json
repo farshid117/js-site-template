@@ -21,12 +21,12 @@
   },
   {
     "id": "05-card5",
-    "name": "کارت گرید قیمت گذاری",
+    "name": "کارت گرید قیمت گذاری ریسپانسیو",
     "demoPath": "../../../projects/3-components/08-cards/05-card5/index.html"
   },
   {
     "id": "06-card6",
-    "name": "کارت 6",
+    "name": "کارت گرید محصولات ریسپانسیو",
     "demoPath": "../../../projects/3-components/08-cards/06-card6/index.html"
   }
 ]
