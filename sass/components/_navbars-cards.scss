@@ -77,7 +77,7 @@
 
 /* برای بخش کد */
 .code-container {
-  max-height: 60vh;
+  max-height: 50vh;
   overflow-y: auto;
   text-align: left;
   direction: ltr; /* تنظیم جهت از چپ به راست برای نمایش کدها */
@@ -93,7 +93,7 @@
   white-space: pre-wrap; /* بگذار خطوط کد شکسته شوند */
   word-wrap: break-word;
   min-height: 400px !important;
-  max-height: 60vh !important;
+  max-height: 50vh !important;
 }
 
 .copy-btn {
