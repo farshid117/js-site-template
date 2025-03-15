@@ -32,6 +32,7 @@
   width: 90%;
   margin: auto;
   padding: 2.9rem;
+   transition: .4s;
 }
 .navbar img {
   width: 160px;
@@ -66,10 +67,14 @@
   right: 50px;
   cursor: pointer;
   display: none;
+ 
 }
 .hamburger i { 
     color: #fff;
     font-size: 40px;
+}
+.hamburger.show + .navbar{
+    left: 0;
 }
 .content {
   text-align: center;
@@ -178,6 +183,8 @@
     background: red;
     flex-direction: column;
     z-index: 10;
+    top: 0;
+    left: -285px;
   }
   .hamburger {
     display: block;
