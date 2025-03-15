@@ -137,14 +137,14 @@ particlesJS('particles2-js',
   {
     "particles": {
       "number": {
-        "value": 5,
+        "value": 10,
         "density": {
           "enable": true,
           "value_area": 800
         }
       },
       "color": {
-        "value": "#ffffff"
+        "value": "#0d0e18"
       },
       "shape": {
         "type": "polygon",

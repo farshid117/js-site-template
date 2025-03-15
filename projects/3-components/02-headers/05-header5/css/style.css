@@ -16,7 +16,9 @@ body {
 #particles2-js {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(45deg, #e91e63, #ff9800);
+    /* background: linear-gradient(45deg, #e91e63, #ff9800); */
+    background: linear-gradient(120deg, #0d0e18, #4a4c6a);
+
     margin: 20px 0;
 }
 #particles3-js {
