@@ -12,3 +12,16 @@ body {
     background-size: cover;
     background-position: center;
 }
+#particles2-js {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #e91e63, #ff9800);
+}
+
+#particles3-js {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/Christmas3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
