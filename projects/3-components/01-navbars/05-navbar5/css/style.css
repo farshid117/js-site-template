@@ -1,4 +1,27 @@
 /* todo: Mega-Menu-Compenent styles  */
+/* todo: YekanBakh Fonts */
+@font-face {
+  font-family: "YekanBakh";
+  src: url("../../../../../fonts/YekanBakh-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "YekanBakh Medium";
+  src: url("../../../../../fonts/YekanBakh-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "YekanBakh Bold";
+  src: url("../../../../../fonts/YekanBakh-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "YekanBakh Heavy";
+  src: url("../../../../../fonts/YekanBakh-Heavy.woff") format("woff");
+}
+a{
+  text-decoration: none;
+}
+ol, ul {
+	list-style: none;
+}
 .megamenu-body {
   font-family: "YekanBakh";
   line-height: 1.5;

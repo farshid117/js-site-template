@@ -1,26 +1,78 @@
 @charset "UTF-8";
-/* Variables  style */
-/* متغیرهای تم */
-:root {
-  --navbar-bg: #fff;
-  --header-bg: #f0f8ff;
-  --products-bg: #f9f9f9;
-  --card-bg: #ffffff;
-  --footer-bg: #eeeeee;
-  --text-color: #333;
-  --title-color: #e65100;
-  --ff-primary: "Vazir", sans-serif;
+/* Main Layout styles(utilities) */
+html {
+  scroll-behavior: smooth;
+  font-family: "vazir";
 }
 
-body.dark {
-  --navbar-bg: #333c4c;
-  --header-bg: #111827;
-  --products-bg: #111827;
-  --card-bg: #242a38;
-  --footer-bg: #333c4c;
-  --text-color: #f9f9f9;
-  --title-color: #FFA726;
-  transition: all 0.5s;
+body {
+  font-family: "vazir";
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*Reset & Base Utilities stylse */
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* My Reset Style */
+a {
+  text-decoration: none;
 }
 
 /* todo Font-Fasce  */
@@ -71,18 +123,28 @@ body.dark {
   font-family: "YekanBakh Heavy";
   src: url("../../fonts/YekanBakh-Heavy.woff") format("woff");
 }
-/* Main Layout styles(utilities) */
-html {
-  scroll-behavior: smooth;
-  font-family: "vazir";
+/* Variables  style */
+/* متغیرهای تم */
+:root {
+  --navbar-bg: #fff;
+  --header-bg: #f0f8ff;
+  --products-bg: #f9f9f9;
+  --card-bg: #ffffff;
+  --footer-bg: #eeeeee;
+  --text-color: #333;
+  --title-color: #e65100;
+  --ff-primary: "Vazir", sans-serif;
 }
 
-body {
-  font-family: "vazir";
-}
-
-::-webkit-scrollbar {
-  display: none;
+body.dark {
+  --navbar-bg: #333c4c;
+  --header-bg: #111827;
+  --products-bg: #111827;
+  --card-bg: #242a38;
+  --footer-bg: #333c4c;
+  --text-color: #f9f9f9;
+  --title-color: #FFA726;
+  transition: all 0.5s;
 }
 
 /* نوار بالا */

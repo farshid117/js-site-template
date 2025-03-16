@@ -1,8 +1,7 @@
-@import "configs/variables";
-@import "base";
-@import "mixins";
-@import "configs/fonts";
 @import "configs/utilities";
+@import "configs/reset";
+@import "configs/fonts";
+@import "configs/variables";
 
 @import "components/navbar";
 @import "components/header";
