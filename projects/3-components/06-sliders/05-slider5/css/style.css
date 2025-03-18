@@ -25,3 +25,6 @@
     .swiper-slide {
       overflow: hidden;
     }
+    img:hover{
+      cursor: zoom-in;
+    }
