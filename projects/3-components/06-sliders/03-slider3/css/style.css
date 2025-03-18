@@ -1,14 +1,16 @@
-body {
+/* body {
+  position: relative;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 50px;
+} */
 .swiper {
   width: 350px !important; /* عرض کل اسلایدر */
-  height:500px !important; /* ارتفاع کل اسلایدر */
+  height: 500px !important; /* ارتفاع کل اسلایدر */
 }
 .swiper-slide {
   display: flex;
@@ -22,12 +24,12 @@ body {
   height: 500px; /* ارتفاع هر اسلاید */
 }
 .swiper-slide img {
-    object-fit: cover !important;
-    object-position:center !important;
-    border-radius: 30px;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 30px;
 }
 .slide1 {
-  background-color: purple; 
+  background-color: purple;
 }
 .slide2 {
   background-color: blue;
