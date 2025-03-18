@@ -1,0 +1,32 @@
+[
+  {
+    "id": "01-gallery1",
+    "name": "گالری با لایت باکس مودالی",
+    "demoPath": "../../../projects/3-components/09-gallerys/01-gallery1/index.html"
+  },
+  {
+    "id": "02-gallery2",
+    "name": "2",
+    "demoPath": "../../../projects/3-components/09-gallerys/02-gallery2/index.html"
+  },
+  {
+    "id": "03-gallery3",
+    "name": "3",
+    "demoPath": "../../../projects/3-components/09-gallerys/03-gallery3/index.html"
+  },
+  {
+    "id": "04-gallery4",
+    "name": "4",
+    "demoPath": "../../../projects/3-components/09-gallerys/04-gallery4/index.html"
+  },
+  {
+    "id": "05-gallery5",
+    "name": "5",
+    "demoPath": "../../../projects/3-components/09-gallerys/05-gallery5/index.html"
+  },
+  {
+    "id": "06-gallery6",
+    "name": "6",
+    "demoPath": "../../../projects/3-components/09-gallerys/06-gallery6/index.html"
+  }
+]

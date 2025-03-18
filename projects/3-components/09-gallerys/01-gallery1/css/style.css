@@ -1,0 +1,113 @@
+::-webkit-scrollbar{
+    display: none;
+}
+body {
+  background-color: #292b40;
+  color: #fff;
+  font-family: "Vazir", sans-serif;
+  text-align: center;
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.zoom-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.zoom-img:hover {
+  transform: scale(1.05);
+}
+/* لایت‌باکس */
+.lightbox {
+  display: none; /* پیش فرض مخفی */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+
+  opacity: 0;
+  transition: opacity 0.4s ease; /* نرم باز و بسته می‌شه */
+}
+
+.lightbox.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 1;
+}
+
+.lightbox-content {
+  display: block;
+  border-radius: 10px;
+
+  /* اندازه ثابت */
+  width: 800px;
+  height: 700px;
+
+  /* برش مناسب تصویر */
+  object-fit: cover;
+
+  /* افکت نرمی که قبلاً داشتیم */
+  transform: scale(0.8);
+  transition: transform 0.4s ease;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ff4081;
+}
+@media (max-width: 900px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .lightbox-content {
+    width: 90%; /* ریسپانسیو برای صفحه‌های کوچیک‌تر */
+    height: auto;
+    max-height: 80vh;
+  }
+}
+@media (max-width: 480px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr ;
+  }
+  .lightbox-content {
+    width: 95%; /* ریسپانسیو برای صفحه‌های کوچیک‌تر */
+    height: auto;
+    max-height: 80vh;
+  }
+  h1{
+    font-size: 22px;
+  }
+}
