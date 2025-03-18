@@ -1,0 +1,32 @@
+[
+  {
+    "id": "01-gallery1",
+    "name": "اسلایدر با Owl",
+    "demoPath": "../../../projects/3-components/06-sliders/01-gallery1/index.html"
+  },
+  {
+    "id": "02-gallery2",
+    "name": "اسلایدر انیمیشن با css خام",
+    "demoPath": "../../../projects/3-components/06-sliders/02-gallery2/index.html"
+  },
+  {
+    "id": "03-gallery3",
+    "name": "اسلایدر افکت cards و flip 😊 با swiper",
+    "demoPath": "../../../projects/3-components/06-sliders/03-gallery3/index.html"
+  },
+  {
+    "id": "04-gallery4",
+    "name": "اسلایدر افکت coverFlow با swiper",
+    "demoPath": "../../../projects/3-components/06-sliders/04-gallery4/index.html"
+  },
+  {
+    "id": "05-gallery5",
+    "name": "اسلایدر با قابلیت زوم عکس با swiper",
+    "demoPath": "../../../projects/3-components/06-sliders/05-gallery5/index.html"
+  },
+  {
+    "id": "06-gallery6",
+    "name": "اسلایدر 6",
+    "demoPath": "../../../projects/3-components/06-sliders/06-gallery6/index.html"
+  }
+]
