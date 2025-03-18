@@ -16,12 +16,12 @@
   },
   {
     "id": "04-slider4",
-    "name": "اسلاید افکت coverFlow با swiper",
+    "name": "اسلایدر افکت coverFlow با swiper",
     "demoPath": "../../../projects/3-components/06-sliders/04-slider4/index.html"
   },
   {
     "id": "05-slider5",
-    "name": "اسلایدر 5",
+    "name": "اسلایدر با قابلیت زوم عکس با swiper",
     "demoPath": "../../../projects/3-components/06-sliders/05-slider5/index.html"
   },
   {
