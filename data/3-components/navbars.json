@@ -26,6 +26,16 @@
   },
   {
     "id": "06-navbar6",
+    "name": "نوبار dropdwn سایت آموزشی",
+    "demoPath": "../../../projects/3-components/01-navbars/06-navbar6/index.html"
+  },
+  {
+    "id": "06-navbar6",
+    "name": "نوبار 6",
+    "demoPath": "../../../projects/3-components/01-navbars/06-navbar6/index.html"
+  },
+  {
+    "id": "06-navbar6",
     "name": "نوبار 6",
     "demoPath": "../../../projects/3-components/01-navbars/06-navbar6/index.html"
   }
