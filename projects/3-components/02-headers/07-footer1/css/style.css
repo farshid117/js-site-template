@@ -1,12 +1,12 @@
 @font-face {
-    font-family: IRANSans;
-    src: url(../../../../../fonts/IRANSans.ttf);
+  font-family: IRANSans;
+  src: url(../../../../../fonts/IRANSans.ttf);
 }
 :root {
-    --primary-font: "IRANSans";
-    --primary-color: #2bce56;
-    --white-color: #fff;
-    --dark-color: #464749;
+  --primary-font: "IRANSans";
+  --primary-color: #2bce56;
+  --white-color: #fff;
+  --dark-color: #464749;
 }
 html {
   box-sizing: border-box;
@@ -19,7 +19,9 @@ body {
   font-family: var(--primary-font);
   direction: rtl;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 *,
 *::after,
 *::before {
@@ -113,16 +115,32 @@ i {
 }
 /* Finish Footer Styles */
 
-
-.addheight{
+.addheight {
   height: 60vh;
   background: #363739;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
+  text-align: center;
 }
-.addheight__text{
+.addheight__text {
   font-size: 8rem;
   color: #fff;
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .footer-widgets::before {
+    width: 25rem;
+  }
+  .footer-widgets__text {
+    text-align: justify;
+  }
+  .addheight__text {
+    font-size: 3rem;
+  }
+  .footer__copyright-text {
+    font-size: 1.2rem;
+  }
 }
