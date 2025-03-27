@@ -28,5 +28,10 @@
     "id": "06-header6",
     "name": "هدر سایت مسافرتی بک‌گراند ویدئویی",
     "demoPath": "../../../projects/3-components/02-headers/06-header6/index.html"
+  },
+  {
+    "id": "07-footer1",
+    "name": "فوتر با تزیین ریسپانسیو با بوت استرپ",
+    "demoPath": "../../../projects/3-components/02-headers/07-footer1/index.html"
   }
 ]
