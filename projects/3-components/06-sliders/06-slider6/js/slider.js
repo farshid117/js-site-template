@@ -1,7 +1,10 @@
 const swiper = new Swiper('.swiper-container', {
+    effect: "cards",
     speed: 800,
     loop: true,
-
+    spaceBetween: 30,
+    grabCursor: true,
+    freeMode: false,
     breakpoints: {
         576: {
             slidesPerView: 1

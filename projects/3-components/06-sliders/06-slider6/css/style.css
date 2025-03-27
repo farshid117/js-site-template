@@ -213,7 +213,10 @@ i {
   font-size: 1.9rem;
 }
 
-/* Start Popular & Presell Courses Styles */
+/* Start Popular & Presell Courses Slider Styles */
+.swiper {
+  height: 350px;
+}
 .popular, .presell {
   margin: 5rem 0;
 }
