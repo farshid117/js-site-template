@@ -40,6 +40,11 @@ a:hover {
 i {
   user-select: none;
 }
+
+input[type="checkbox"], input[type="radio"]{
+    accent-color:var(--primary-color);
+}
+
 /* Finish Default Styles */
 
 .login-register {
