@@ -250,8 +250,7 @@
           codeJs.innerHTML = "در حال بارگذاری...";
 
           // بررسی مسیر صحیح
-          let basePath =
-            window.location.origin + "/projects/3-components/07-others/";
+          let basePath = window.location.origin + "/projects/3-components/07-others/";
           /* todo get Html Code */
           fetch(`${basePath}${otherId}/index.html`)
             .then((response) =>
