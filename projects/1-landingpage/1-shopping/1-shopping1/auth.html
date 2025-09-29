@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود و ثبت نام - فروشگاه آنلاین</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold text-primary" href="index.html">
+                        <i class="bi bi-shop me-2"></i>فروشگاه
+                    </a>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">خانه</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="products.html">محصولات</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">درباره ما</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">تماس با ما</a>
+                            </li>
+                        </ul>
+                        
+                        <div class="d-flex flex-column flex-lg-row-reverse align-items-center w-100 w-lg-auto">
+                            <div class="d-flex align-items-center gap-2 order-2 order-lg-1">
+                                <a href="auth.html" class="btn btn-primary">ورود / ثبت نام</a>
+                                <a href="cart.html" class="btn btn-outline-primary position-relative">
+                                    <i class="bi bi-cart3"></i>
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                                </a>
+                            </div>
+                            
+                            <div class="search-box me-0 me-lg-3 mb-3 mb-lg-0 order-1 order-lg-2">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="جستجو...">
+                                    <button class="btn btn-outline-secondary" type="button">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Auth Section -->
+    <section class="auth-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="auth-container">
+                        <!-- Auth Tabs -->
+                        <div class="auth-tabs mb-4">
+                            <div class="nav nav-pills justify-content-center" role="tablist">
+                                <button class="nav-link active" id="login-tab" data-bs-toggle="pill" data-bs-target="#login" type="button" role="tab">
+                                    <i class="bi bi-box-arrow-in-right me-2"></i>ورود
+                                </button>
+                                <button class="nav-link" id="register-tab" data-bs-toggle="pill" data-bs-target="#register" type="button" role="tab">
+                                    <i class="bi bi-person-plus me-2"></i>ثبت نام
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content">
+                            <!-- Login Tab -->
+                            <div class="tab-pane fade show active" id="login" role="tabpanel">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10">
+                                <div class="auth-card">
+                                            <div class="auth-header text-center mb-4">
+                                                <div class="auth-icon mb-3">
+                                                    <i class="bi bi-person-circle"></i>
+                                                </div>
+                                                <h2 class="auth-title">خوش آمدید</h2>
+                                                <p class="auth-subtitle">وارد حساب کاربری خود شوید</p>
+                                            </div>
+                                            
+                                            <form id="loginForm" class="auth-form">
+                                                <div class="form-floating mb-3">
+                                                    <input type="text" class="form-control" id="loginEmail" placeholder="ایمیل یا شماره موبایل" required>
+                                                    <label for="loginEmail">ایمیل یا شماره موبایل</label>
+                                                </div>
+                                                
+                                                <div class="form-floating mb-3">
+                                                    <input type="password" class="form-control" id="loginPassword" placeholder="رمز عبور" required>
+                                                    <label for="loginPassword">رمز عبور</label>
+                                                </div>
+                                                
+                                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                                                        <label class="form-check-label" for="rememberMe">مرا به خاطر بسپار</label>
+                                                    </div>
+                                                    <a href="#" class="forgot-link">فراموشی رمز عبور؟</a>
+                                                </div>
+                                                
+                                                <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
+                                                    <i class="bi bi-box-arrow-in-right me-2"></i>ورود
+                                                </button>
+                                                
+                                                <div class="divider">
+                                                    <span>یا</span>
+                                                </div>
+                                                
+                                                <div class="social-buttons">
+                                                    <button type="button" class="btn btn-outline-danger w-100 mb-2">
+                                                        <i class="bi bi-google me-2"></i>ورود با گوگل
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-primary w-100">
+                                                        <i class="bi bi-facebook me-2"></i>ورود با فیس‌بوک
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Register Tab -->
+                            <div class="tab-pane fade" id="register" role="tabpanel">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10">
+                                <div class="auth-card">
+                                            <div class="auth-header text-center mb-4">
+                                                <div class="auth-icon mb-3">
+                                                    <i class="bi bi-person-plus-circle"></i>
+                                                </div>
+                                                <h2 class="auth-title">ایجاد حساب کاربری</h2>
+                                                <p class="auth-subtitle">حساب کاربری جدید ایجاد کنید</p>
+                                            </div>
+                                            
+                                            <form id="registerForm" class="auth-form">
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="firstName" placeholder="نام" required>
+                                                            <label for="firstName">نام</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="lastName" placeholder="نام خانوادگی" required>
+                                                            <label for="lastName">نام خانوادگی</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-floating mb-3">
+                                                    <input type="email" class="form-control" id="registerEmail" placeholder="ایمیل" required>
+                                                    <label for="registerEmail">ایمیل</label>
+                                                </div>
+                                                
+                                                <div class="form-floating mb-3">
+                                                    <input type="tel" class="form-control" id="phoneNumber" placeholder="شماره موبایل" required>
+                                                    <label for="phoneNumber">شماره موبایل</label>
+                                                </div>
+                                                
+                                                <div class="form-floating mb-3">
+                                                    <input type="password" class="form-control" id="registerPassword" placeholder="رمز عبور" required>
+                                                    <label for="registerPassword">رمز عبور</label>
+                                                </div>
+                                                
+                                                <div class="form-floating mb-3">
+                                                    <input type="password" class="form-control" id="confirmPassword" placeholder="تکرار رمز عبور" required>
+                                                    <label for="confirmPassword">تکرار رمز عبور</label>
+                                                </div>
+                                                
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                                                    <label class="form-check-label" for="agreeTerms">
+                                                        با <a href="#" class="terms-link">قوانین و مقررات</a> موافقم
+                                                    </label>
+                                                </div>
+                                                
+                                                <div class="form-check mb-4">
+                                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                                    <label class="form-check-label" for="newsletter">
+                                                        دریافت اخبار و پیشنهادات ویژه
+                                                    </label>
+                                                </div>
+                                        
+                                                <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
+                                                    <i class="bi bi-person-plus me-2"></i>ثبت نام
+                                                </button>
+                                                
+                                                <div class="divider">
+                                                    <span>یا</span>
+                                                </div>
+                                                
+                                                <div class="social-buttons">
+                                                    <button type="button" class="btn btn-outline-danger w-100 mb-2">
+                                                        <i class="bi bi-google me-2"></i>ثبت نام با گوگل
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-primary w-100">
+                                                        <i class="bi bi-facebook me-2"></i>ثبت نام با فیس‌بوک
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h5>امنیت بالا</h5>
+                        <p>اطلاعات شما با بالاترین سطح امنیت محافظت می‌شود</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-lightning"></i>
+                        </div>
+                        <h5>دسترسی سریع</h5>
+                        <p>دسترسی آسان و سریع به تمام امکانات فروشگاه</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-heart"></i>
+                        </div>
+                        <h5>تجربه شخصی</h5>
+                        <p>تجربه خرید شخصی‌سازی شده بر اساس علایق شما</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="mb-3">فروشگاه آنلاین</h5>
+                    <p class="text-muted">بهترین محصولات با بهترین قیمت و کیفیت</p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-telegram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="mb-3">دسترسی سریع</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">درباره ما</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">تماس با ما</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">قوانین</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="mb-3">محصولات</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">گوشی موبایل</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">لپ‌تاپ</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">هدفون</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="mb-3">تماس با ما</h6>
+                    <p class="text-muted mb-2">
+                        <i class="bi bi-geo-alt me-2"></i>
+                        تهران، خیابان ولیعصر
+                    </p>
+                    <p class="text-muted mb-2">
+                        <i class="bi bi-telephone me-2"></i>
+                        021-12345678
+                    </p>
+                    <p class="text-muted">
+                        <i class="bi bi-envelope me-2"></i>
+                        info@shop.com
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center text-muted">
+                <p>&copy; 2024 فروشگاه آنلاین. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function switchToRegister() {
+            document.querySelector('.login-form').style.display = 'none';
+            document.querySelector('.register-form').style.display = 'block';
+        }
+
+        function switchToLogin() {
+            document.querySelector('.register-form').style.display = 'none';
+            document.querySelector('.login-form').style.display = 'block';
+        }
+
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const button = input.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.className = 'bi bi-eye-slash';
+            } else {
+                input.type = 'password';
+                icon.className = 'bi bi-eye';
+            }
+        }
+
+        // Password strength checker
+        document.getElementById('registerPassword').addEventListener('input', function() {
+            const password = this.value;
+            const strengthBar = document.querySelector('.progress-bar');
+            let strength = 0;
+            
+            if (password.length >= 8) strength += 25;
+            if (/[a-z]/.test(password)) strength += 25;
+            if (/[A-Z]/.test(password)) strength += 25;
+            if (/[0-9]/.test(password)) strength += 25;
+            
+            strengthBar.style.width = strength + '%';
+            
+            if (strength < 50) {
+                strengthBar.className = 'progress-bar bg-danger';
+            } else if (strength < 75) {
+                strengthBar.className = 'progress-bar bg-warning';
+            } else {
+                strengthBar.className = 'progress-bar bg-success';
+            }
+        });
+
+        // Form validation
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('ورود با موفقیت انجام شد!');
+            // Redirect to main page
+            window.location.href = 'index.html';
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('رمز عبور و تکرار آن مطابقت ندارند!');
+                return;
+            }
+            
+            alert('ثبت نام با موفقیت انجام شد!');
+            // Redirect to main page
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
